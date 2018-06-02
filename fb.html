@@ -1,0 +1,46 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="my-image-container">
+    <img id="share" src="https://s3.amazonaws.com/whirlart-images/15198810503068093f8fc-b891-4d18-a1ae-58fd190a1db0/processedImage.jpg">
+    <img src="https://s3.amazonaws.com/whirlart-images/15198810503068093f8fc-b891-4d18-a1ae-58fd190a1db0/styleImage.jpg">
+    <img src="https://s3.amazonaws.com/whirlart-images/15198810503068093f8fc-b891-4d18-a1ae-58fd190a1db0/processedImage.jpg">
+    <a href="#" class="fb-share-image">Share</a>');
+</div>
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+        appId            : '172807293348238',
+        status           : true,
+        cookie           : true,
+        version          : 'v2.10'                
+    });
+    
+    $( '.fb-share-image' ).click(function(e){
+        e.preventDefault();
+        var image = $('#share').attr('src');
+        var name = "Manoj";
+ FB.ui({
+    method: 'share_open_graph',
+    action_type: 'og.shares',
+     display: 'popup',
+  action_properties: JSON.stringify({
+    object: {
+      'og:url': 'http://www.whirldatascience.com/whirlart',
+      'og:title': 'WhirlArt',
+      'og:description': name+' created a awesome art using WhirlArt ',
+      'og:image': image
+  }
+}) }, function(response){});
+})
+};
+
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+</script>

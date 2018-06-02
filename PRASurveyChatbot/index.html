@@ -1,0 +1,400 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+ -->
+ <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="jquery.cssemoticons.js" type="text/javascript"></script>
+<link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+<link href="jquery.cssemoticons.css" media="screen" rel="stylesheet"
+	type="text/css" />
+<link href="custom.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://s3.amazonaws.com/aptengineapi/aptEngine.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+<script src="js/recorderjs/recorder.js"  type="text/javascript"></script>
+<script src="recordermain.js"  type="text/javascript"></script>
+
+<body>
+<!-- 	<div id="recording">
+		<button class="btn" onclick="toggleRecording(this);">Record</button>
+		<a class="btn" id="save" href="#">Stop</a>
+	</div> -->
+	<div
+		style="background-color: black; background-image: linear-gradient(to right, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);">
+		<center>
+			<p style="display: none; color: white">PRA Health Sciences</p>
+		</center>
+	</div>
+	<center>
+		<button id="initButton" onclick="init()" class="btn btn-link"><b>Get
+			started</b></button>
+	</center>
+	<div id="divbox" class="messgeboxdiv col-sm-12">
+		<ul id="messagebox">
+			<li class="him col-sm-4">Hi welcome to PRA survey!</li>
+			<li class="him col-sm-4">Give your opinion and feedback for
+				further research</li>
+			<li id ="bubble" class="him col-sm-4" style="display:none;height: 10px;">
+					<div class="spinner">
+	  					<div class="bounce1"></div>
+	  					<div class="bounce2"></div>
+    					<div class="bounce3"></div>
+					</div>
+			</li>
+		</ul>
+	</div>
+	<div id="text-speak" class="inputbox col-sm-12 col-xs-12">
+		<input type="text" id="message" class="search form-control"
+			placeholder="Enter your message..">
+		<button id="speakbutton" class="fa fa-microphone btn btn-default"></button>
+	</div>
+	<div id="viz" style="display: none">
+		<canvas id="analyser" width="1024" height="500"></canvas>
+		<canvas id="wavedisplay" width="1024" height="500"></canvas>
+	</div>
+
+<script>
+
+	function drawBuffer(width, height, context, data) {
+		var step = Math.ceil(data.length / width);
+		var amp = height / 2;
+		context.fillStyle = "silver";
+		context.clearRect(0, 0, width, height);
+		for (var i = 0; i < width; i++) {
+			var min = 1.0;
+			var max = -1.0;
+			for (j = 0; j < step; j++) {
+				var datum = data[(i * step) + j];
+				if (datum < min)
+					min = datum;
+				if (datum > max)
+					max = datum;
+			}
+			context.fillRect(i, (1 + min) * amp, 1, Math.max(1, (max - min)
+					* amp));
+		}
+	}
+
+	AWS.config.region = 'us-east-1'; // Region
+	AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+		IdentityPoolId : 'us-east-1:19c071e6-27ba-4163-abfd-89bca414d6d3',
+	});
+	AWS.config.credentials.get(function(err) {
+		if (err)
+			alert(err);
+		console.log(AWS.config.credentials);
+	});
+
+	var bucketName = 'wd-prahs'; // Enter your bucket name
+	var bucket = new AWS.S3({
+		params : {
+			Bucket : bucketName
+		}
+	});
+
+	var responseApiURL = "https://fxbye3dnf1.execute-api.us-west-2.amazonaws.com/v1/";
+	var rdsresponseApiURL = "https://mi517ug9uj.execute-api.us-east-1.amazonaws.com/v1/start";
+		var apiKey = "demo"; // FOR APT ENGINE SAVE RESPONSE
+	var audioApiURL = "http://localhost/save.php";
+	var questionOrder = 1;
+	var element = document.getElementById('divbox');
+
+	var currentQuestionTitle = "";
+	var currentQuestionNumber = "";
+	var currentQuestionAskCommand = "";
+	var currentUserId = "";
+	var currentOptions = "";
+	var currentAudioFileLocation = "";
+	var currentAudioFileName = "";
+	var s3Prefix = "https://s3.amazonaws.com/wd-prahs/audio/";
+	var currentResponseType = "typed";
+	var currentQuestionId = "";
+	var followOnQuestion = "";
+
+	// var json = (function() {
+	// 	var json = null;
+	// 	$.ajax({
+	// 		'async' : false,
+	// 		'global' : false,
+	// 		'url' : 'question.json',
+	// 		'dataType' : "json",
+	// 		'success' : function(data) {
+	// 			json = data;
+	// 			console.log(json['questions'][1]['title']);
+	// 			console.log(json['questions'][1]['options']);
+	// 		}
+	// 	});
+	// 	return json;
+	// })();
+
+
+	function init() {		
+
+		$("#initButton").hide();
+		if (localStorage.getItem("userId")) {
+			currentUserId = localStorage.getItem("userId");
+			console.log(currentUserId);
+		} else {
+			localStorage.setItem("userId", new Date().getTime());
+			currentUserId = localStorage.getItem("userId");
+			console.log(currentUserId);
+		}
+		//loadQuestion();
+		var sendreq = new Object();
+		sendreq.userId = currentUserId;
+		sendreq.message = '!!GeTStArTED!!';
+		sendreq.surveyId = 1 ; 
+		console.log(sendreq);		
+		$("#divbox").show();
+		$('ul').append('<li class="him bub">'+$('#bubble').html()+'</li>');
+		postjsoncall(sendreq);
+	}
+
+	function showComments() {
+		$("ul").append(
+				" <li class='him'>Any comments on the above questions</li>");
+		gotoTop();
+	}
+
+	function printinputmsg(msg) {
+		$("ul").append(" <li class='me'>" + msg + "</li>");
+		$('.me').emoticonize();
+		// 		element.scrollTop = element.scrollHeight;
+		gotoTop();
+		if (currentAudioFileName == "")
+			currentAudioFileName = "n/a";
+		else
+			currentAudioFileName = s3Prefix + currentAudioFileName + ".wav";
+		var sendrequest = new Object();
+		sendrequest.userId = localStorage.getItem("userId");
+		sendrequest.message = msg;
+		sendrequest.surveyId = 1 ; 
+
+		$('ul').append('<li class="him bub">'+$('#bubble').html()+'</li>');
+
+		var responseObject = {
+			"questionNumber" : currentQuestionNumber,
+			"questionId" : currentQuestionId,
+			"question" : currentQuestionTitle,
+			"descriptiveAnswer" : msg,
+			"pageClass" : "survey",
+			"userId" : currentUserId,
+			"responseType" : currentResponseType,
+			"audioFileName" : currentAudioFileName
+		}
+		saveResponse(responseObject);
+
+		$("#message").val("");
+		
+		postjsoncall(sendrequest);
+		gotoTop();
+	}
+
+	function saveResponse(responseObject) {
+		console.log("Saving==> " + JSON.stringify(responseObject));
+		putImpression(responseObject, function(data) {
+			console.log(responseObject);
+			console.log("Put impression result=> " + JSON.stringify(data));
+		});
+	}
+
+	function gotoTop() {
+		element.scrollTop = element.scrollHeight;
+	}
+	
+	function postjsoncall(sendreq) {
+		
+		$
+		.ajax({
+					url : rdsresponseApiURL,
+					type : 'POST',	
+					crossDomain: true,				
+					data: JSON.stringify(sendreq),
+        			dataType : 'json',         			
+			        contentType: "application/json",
+					success : function(data) {
+
+						console.log(data);
+						$('.bub').remove();
+						loadQuestion(data);
+						
+
+					},
+				});
+
+	}
+
+
+	function loadQuestion(data) {
+		try {
+
+			currentResponseType = "typed";
+			currentQuestionId = data.qid;
+			currentQuestionTitle = data.questionTitle;
+			followOnQuestion = "";
+			parentQuestionid = "";
+
+			if (data.followOn)
+				followOnQuestion = "yes";
+			else
+				followOnQuestion = "no";
+
+			if (data.parentQuestion)
+				parentQuestionid = data.parentQuestion;
+			else
+				parentQuestionid = "n/a";
+
+
+		$("#typing").remove();
+		if(data.questionTitle){
+			question = data.questionTitle;
+
+
+		$("ul").append(" <li class='him'>" + question + "</li>");
+		currentQuestionNumber = questionOrder;
+
+		var message = new SpeechSynthesisUtterance(question);
+		var voices = speechSynthesis.getVoices();
+		speechSynthesis.speak(message);
+
+		var optionButtons = "";
+		var totalOptions = 0;
+		currentOptions = "n/a";
+		if(data.options){
+
+			currentOptions = data.options;
+			var options = data.options.split(",")
+		
+		console.log(options);
+		$.each(options, function(i, item) {
+			var opt = encodeURIComponent(item);
+			optionButtons = optionButtons + "<button class='btn btn-link' onclick=getoption('"+i+"','"+opt+"') >"
+					+ item + "</button>";
+			totalOptions++;
+		});
+		if (totalOptions > 0){
+			$("ul").append(" <li class='him optionButton'>" + optionButtons + "</li>");
+			}
+		}
+
+			var questionObject = {
+				"questionNumber" : currentQuestionNumber,
+				"questionId" : currentQuestionId,
+				"question" : currentQuestionTitle,
+				"options" : currentOptions,
+				"pageClass" : "surveyQuestion",
+				"userId" : currentUserId,
+				"followOn" : followOnQuestion,
+				"parentQuestion" : parentQuestionid
+			}
+			saveResponse(questionObject);
+
+			gotoTop()
+			questionOrder++;
+		}
+		else{
+			jQuery('#text-speak').hide();
+			jQuery('.messgeboxdiv').css({'height':'95%'});
+			$("ul").append(" <li class='him'>" + data.message + "</li>");
+			var message = new SpeechSynthesisUtterance(data.message);
+			var voices = speechSynthesis.getVoices();
+			speechSynthesis.speak(message);
+
+			}
+		} catch (err) {
+			alert(err);
+			gotoTop();
+		}
+
+	}
+
+	
+	function getoption(index,item) {
+
+		console.log("option")
+
+		questionTitle = currentQuestionTitle;
+		currentResponseType = "optionSelected";
+		optionTitle = item;
+		$(".optionButton").hide();
+		optionTitle = decodeURIComponent(item);
+		//console.log(questionTitle);
+		console.log(optionTitle);
+		var sendreq = new Object();
+		sendreq.userId = localStorage.getItem("userId");
+		sendreq.message = optionTitle;
+		sendreq.surveyId = 1 ; 
+		postjsoncall(sendreq);		
+		$("ul").append(" <li class='me'>" + optionTitle + "</li>");
+
+		$('ul').append('<li class="him bub">'+$('#bubble').html()+'</li>');
+		// if (nextQuestion)
+		// 	questionOrder = nextQuestion;
+		var responseObject = {
+			"questionNumber" : currentQuestionNumber,
+			"question" : currentQuestionTitle,
+			"optionNumber" : index,
+			"optionTitle" : optionTitle,
+			"pageClass" : "survey",
+			"responseType" : currentResponseType,
+			"userId" : currentUserId
+		}
+		saveResponse(responseObject);
+		console.log("Response saved");
+		gotoTop();
+		//$("#message").focus();
+		//showComments();
+	}
+
+	
+	var speechtext = "";
+	$(document).ready(function() {
+		$(document).keypress(function(e) {
+			if (e.which == 13) {
+				if ($("#message").val() != '') {
+					var txtmsg = $("#message").val();
+					$("#message").val("");
+					printinputmsg(txtmsg);
+				}
+			}
+		}
+
+		);
+	});
+
+	function speak(msg) {
+		var message = new SpeechSynthesisUtterance(msg);
+		var voices = speechSynthesis.getVoices();
+		speechSynthesis.speak(message);
+	}
+
+	var currentSpeaker = "no";
+	var voicemsg = "";
+	var recognition = new webkitSpeechRecognition();
+	//var recognition = new SpeechRecognition();
+	recognition.onresult = function(event) {
+				console.log(event);
+
+		speechtext = event.results[0][0].transcript;
+		printinputmsg(speechtext);
+	}
+
+	recognition.onerror = function(event) {
+    console.log(event.error);
+	}
+
+	$("#speakbutton").mouseup(function() {
+		//toggleRecording(this);
+		console.log("2222");
+		recognition.stop();
+		currentResponseType = "voiceToText";
+	}).mousedown(function() {
+		//toggleRecording(this);
+		recognition.start();
+	});
+</script>
+
+</body>

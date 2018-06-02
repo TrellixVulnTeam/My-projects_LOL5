@@ -1,0 +1,49 @@
+{
+    "questions": [{
+        "title": "Q1. Your name please"
+    }, {
+        "title": "Question 2",
+        "options": [{
+            "title": "Poor"
+        }, {
+            "title": "Less than satisfactory (skip to 4th question)",
+            "skipTo": 4
+        }, {
+            "title": "Satisfactory"
+        }, {
+            "title": "Good"
+        }, {
+            "title": "Excellent"
+        }]
+    }, {
+        "title": "Question 3",
+        "options": [{
+            "title": "Poor"
+        }, {
+            "title": "Less than satisfactory"
+        }, {
+            "title": "Satisfactory"
+        }, {
+            "title": "Good"
+        }, {
+            "title": "Excellent (skip to 5th question)",
+            "skipTo": 5
+        }]
+    }, {
+        "title": "Question title 4",
+        "options": [{
+            "title": "Yes"
+        }, {
+            "title": "No"
+        }]
+    }, {
+        "title": "Question title 5"
+    }, {
+        "title": "Question title 6",
+        "options": [{
+            "title": "True"
+        }, {
+            "title": "False"
+        }]
+    }]
+}

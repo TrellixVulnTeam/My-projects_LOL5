@@ -1,0 +1,60 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 
+<script type="text/javascript">
+	var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://s3.amazonaws.com/whirlart-images/",
+  "method": "GET",
+  "headers": {
+  	'Access-Control-Allow-Origin' : '*'
+  	  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+</script>  -->
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.min.js"></script>  
+<script type="text/javascript">   
+	var s3BucketName = 'whirlart-images';
+AWS.config.update({
+    accessKeyId: "AKIAIAVDD4RBLEXTOOFA",
+    secretAccessKey: "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"
+});
+
+	function listObjs() {     
+	var i =1;  
+		var s3 = new AWS.S3({ 
+			params: {
+			Bucket: s3BucketName
+			} 
+	});
+		s3.listObjects(function(error,data) {      
+			if (error === null) { 
+				var html_keys = 'Object Keys:<br />';
+				var html_imgs = '';
+				console.log(data);
+				jQuery.each(data.Contents, function(index, obj) {    
+				/*html_keys += (index + ': ' + obj.Key + '<br />');  
+				*/	
+				html_imgs += "<img width='20%' src='" + "https://s3.amazonaws.com/" + s3BucketName + "/" + obj.Key + "'/>";
+				if(i%3 === 0){
+					html_imgs +="<br><br>";
+				}
+				i++;
+
+				   });              
+				jQuery("#objImgs").html(html_imgs);
+				jQuery("#objKeys").html(html_keys); 
+				console.log(i); 
+			} else { 
+				console.log(error); 
+			}   
+		});    
+	} 
+
+</script>  
+
+<button onclick="listObjs()">S3 - List Objects</button>    <div id="objKeys"></div>  <div id="objImgs"></div>  

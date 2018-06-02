@@ -1,0 +1,507 @@
+<html lang="en">
+<meta charset="utf-8">
+<title>WhirlArt</title>
+
+<head>
+	<meta name="twitter:card" content="WhirlArt">
+	<meta name="twitter:site" content="@Whirldata">
+	<meta name="twitter:title" content="WhirlArt">
+	<meta name="twitter:description" content="I created the awsome art using WhirlArt">
+	<meta name="twitter:image" content="">
+
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="WhirlArt" />
+	<meta property="  og:url"   content="https://whirldatascience.com/whirlart" />
+	<meta property="og:description"   content="I created the awsome art using WhirlArt" />
+	<meta name ="fbimage" property="og:image" content="" />
+	<meta property="og:image:width" content="400" >
+	<meta property="og:image:height" content="300" >
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="css/custom.css" media="screen">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<link rel="stylesheet" href="css/swiper.min.css" media="screen">
+  	<link href="css/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+<!-- 	<script src="vendors/jquery.easings.min.js"></script>
+ -->	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<link href="css/croppie.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="portoverlay">
+		<h3 class="portraittxt">Please  use portrait mode<h3>
+			<img src="img/phone-rotate.gif" width="30%">
+	</div>
+	<div id="landoverlay">
+		<h3 class="landtxt">Please  use landscape mode<h3>
+			<img src="img/rotate.gif">
+	</div>
+	<div class="loader"></div>
+
+	<div class="navbar head">
+		<img src="img/whirlart-text-logo-white.png" alt="Avatar" onclick="reload()" style="cursor:pointer;	width:200px;">
+		<div style="text-align: center;" class="col-lg-1 col-md-1 pull-right">
+			<!-- <img id="botimg" src="img/menu-icon.png" width="30" style="padding-top: 15px"> -->
+			<img id="prfimg" onclick="profile()" src="img/user.png" width="30" style="padding-top: 15px;display: none;">
+		</div>	
+	</div>
+	<a href="https://whirldatascience.com/">
+		<img src="img/ai-experiments.png" width="100"
+		style="position:absolute;padding:10px;bottom: 0px;left:0.7%;z-index: 3;"/>
+	</a>
+
+	<div id="fullpage">
+		<div class="section section-one" style="background-color:#ececec;height: 100%" >
+			<header class="navbar aniback">
+
+				<h3 class="header"> Hello! I'm WhirlArt  Let me help you style your image</h3>
+
+				<div class="container" style="margin: 3% auto;">
+					<div class="col-lg-2  hidden-xs-down"></div>
+					<div class="col-lg-8 col-md-11">
+						<div class="col-lg-1 col-md-1 hidden-xs-down"></div>
+
+						<div class="col-lg-3 col-md-3 col-xs-6  firstColumn">
+							<div class="demo1" >
+								<span class="cnttxbx">Content</span>
+
+								<ul id="lightSlider1">
+									<li>
+										<img class="clsl11" src="img/1-1.jpg" />
+									</li>
+									<li>
+										<img class="clsl12" src="img/2-1.jpg" />
+									</li>
+									<li>
+										<img class="clsl13" src="img/3-1.jpg" />
+									</li>
+									<li>
+										<img class="clsl14" src="img/4-1.jpg" />
+									</li>
+									<li>
+										<img class="clsl15" src="img/5-1.jpg" />
+									</li>
+								</ul>
+								<h5 class="cnttxt">Upload content <br>image</h5>
+							</div>
+						</div>
+
+
+						<div class="col-lg-3 col-md-3 col-xs-6 ">
+							<div class="demo2" >
+								<span class="stytxbx pull-right">Style</span>
+								<ul id="lightSlider2">
+									<li>
+										<img class="clsl21" src="img/1-2.jpg" />
+									</li>
+									<li>
+										<img class="clsl22" src="img/2-2.jpg" />
+									</li>
+									<li> 
+										<img class="clsl23" src="img/3-2.jpg" />
+									</li>
+									<li>
+										<img class="clsl24" src="img/4-2.jpg" />
+									</li>
+									<li>
+										<img class="clsl25" src="img/5-2.jpg" />
+									</li>
+								</ul>
+								<h5 class="stytxt">Upload  style<br>image</h5>
+							</div>
+						</div>
+<!-- 						<div class="col-xs-1"></div>
+ -->						<div class="col-lg-5 col-md-5 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0" >
+							<div class="demo col">
+								<div class="resbx">
+									<span class="restxtbx">Creative</span>
+									<h5 class="restxt">WhirlArt</h5>
+								</div>
+								<ul id="lightSlider">
+									<li>
+										<img class="clsl1" src="img/1.jpg" />
+									</li>
+									<li>
+										<img class="clsl2" src="img/2.jpg" />
+									</li>
+									<li>
+										<img class="clsl3" src="img/3.jpg" />
+									</li>
+									<li>
+										<img class="clsl4" src="img/4.jpg" />
+									</li>
+									<li>
+										<img class="clsl5" src="img/5.jpg" />
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-lg-2 col-md-2 hidden-xs-down"></div>
+				</div>
+
+				<div class="col-lg-12 col-md-12 col-xs-12" id="hmsum" style="margin-bottom: 2%;">
+					<div class="col-lg-2 col-md-2 col-xs-1"></div>
+					<div class="col-lg-2 col-md-2 col-xs-2  hmecel">
+						<img onclick="slidergo(1);" src="img/1-1.jpg" class="hme2 hmb21" />
+					</div>
+					<div class="col-lg-2 col-md-2 col-xs-2 hmecel">
+						<img onclick="slidergo(2);" src="img/2-1.jpg" class="hme2 hmb22 "/>
+					</div>
+					<div class="col-lg-2 col-md-2 col-xs-2 hmecel">
+						<img onclick="slidergo(3);" src="img/3-1.jpg" class="hme2 hmb23"/>
+					</div>
+					<div class="col-lg-2 col-md-2 col-xs-2 hmecel">
+						<img onclick="slidergo(4);" src="img/4-1.jpg" class="hme2 hmb24"/>
+					</div>
+					<div class="col-lg-2 col-md-2 col-xs-2 hmecel">
+						<img onclick="slidergo(5);" src="img/5-1.jpg" class="hme2 hmb25" />
+					</div>
+				</div>
+
+				<div class="col-lg-12 col-md-12">
+
+					<div id="twt" class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="right:-10px; top:50%;">
+						<a 
+						href="https://twitter.com/share"
+						data-size="large"
+						data-text=""
+						data-url="https://whirldatascience.com/whirlart/"
+						data-hashtags="AI,art"
+						data-via="whirldatascience"
+						data-related="AI">
+						<img  src="img/twitter-icon.png" width="50"></a>
+					</div>
+
+					<div id="hmwuser" class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="right:10px; top:85%;">
+						<a onclick="$('#myModal').modal('show')">
+							<img  src="img/user.png" width="50"></a>
+						</div>
+
+						<center>
+							<button id="go"	 class="prcdbtn btn"><b>Create your own</b></button>
+							<br>
+			<!-- 	<button  onclick="changeVideo('v7zpsdUgYFY');" style="color:#6633FF" class="btn btn-link">
+				<img src="img/video-icon.png" width="20" /><b> Watch video</b></button> -->
+			</center>
+		</div>
+	</header>
+	<a href="https://whirldatascience.com/">
+		<img src="img/ai-experiments.png" width="100" style="position:absolute;padding:10px;bottom: 0px; left:0.7%;"/></a>
+
+	</div>
+
+	<div class="section">
+		<!-- MASSAGE BODY START-->
+		<div class="msgbody scrollbar"  id="style-4">
+			<h4 class="heading" style="margin: 5px 0px;">Content image</h4>
+			<div class="msg-text">
+				<p style="margin: 5px 0px;">Upload your own Content image or use one of our own to experiment<br>(You can always come back and try on your own image) </p>
+			</div>
+			<div class="col-lg-1 col-md-1"></div>
+			<div class="swiper-container11 col-lg-10 col-md-12 contentslidercls">
+
+				<div class="swiper-wrapper col-xs-10" style="margin-left: 4px">
+					<div class="swiper-slide"><img onclick="gallarycontentimg(this.src)" src="img/1-1.jpg" /></div>
+					<div class="swiper-slide"><img onclick="gallarycontentimg(this.src)" src="img/2-1.jpg" /></div>
+					<div class="swiper-slide"><img onclick="gallarycontentimg(this.src)" src="img/3-1.jpg" /></div>
+					<div class="swiper-slide"><img onclick="gallarycontentimg(this.src)" src="img/4-1.jpg" /></div>
+					<div class="swiper-slide"><img onclick="gallarycontentimg(this.src)" src="img/5-1.jpg" /></div>
+				</div>
+				<div class="swiper-button-prev" style="display: none;"></div>
+				<div class="swiper-button-next" style="display: none;"></div>
+			</div>
+			<div  id="contentslider" class="col-lg-12 col-md-12 contentslidercls1" >
+				<center>
+					<br>
+					<label onclick="contnclick()" class="prcdbtn btn-bs-file btn  ">Upload your own image </label>
+					<hr>
+					<div class="col"></div>
+					<div class="col" id="content-image" ></div>
+					<div class="col">
+						<img id="cnmobtip" src="img/reposition-icon-mobile.png" class="mobtips">
+						<img id="cntip" src="img/reposition-icon-web.png" class="tips">
+					</div>
+
+					<button onclick="rotatecnt(90)"  style="padding:5px;display:none;" class="cntrot donprcdbtn btn">
+					<i class="fas fa-undo" style="font-size:16px"></i>
+				   </button>
+					<button onclick="cntntdone()" style="display:none" id="contnimgdone" class="donprcdbtn btn">
+					Done</button>
+
+					<button onclick="rotatecnt(-90)"  style="padding:5px;display:none;" class="cntrot donprcdbtn btn">
+					<i class="fas fa-redo" style="font-size:16px"></i>
+				   </button>					
+					
+					</center>
+			</div>
+			<!-- MASSAGE BODY END-->
+		</div>
+
+		<div class="result resultbody" id="result" style="display: none;">
+
+			<div class="col-lg-4 col-md-4 col-xs-6">
+				<h5 class="resulthead">Content Image</h5>
+				<img id="fcontent" width="100%">
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-6">
+				<h5 class="resulthead">Style Image</h5>
+				<img id="fstyle" width="100%">
+			</div>
+
+
+			<div class="col-lg-4 col-md-4 col-xs-12 result-img">
+				<h5 class="resulthead">Result Image</h5>
+				<img id="fresult" width="100%"  onerror="$('.result-img').hide(); $('#downloadres').hide(); $('.result-img-error').show();">
+			</div>
+			<div style="display:none;margin: 12% 0;" class="col-lg-4 col-md-4 col-xs-12 result-img-error">
+				Your image is under process. We'll send you the email whenever the process completed.
+			</div>
+
+			<div id="resultstart" class="col-lg-12 col-xs-12" style="display: none; text-align: center;margin-top: 2%">
+				<a id="downloadres" style="margin: 5px" href="#" class="btn prcdbtn resulthead" download="image">Download result</a>
+				<a id="fbshareclick" style="text-decoration: none;" class="result-img btn fbprcdbtn resulthead">
+					<img src="img/icon-facebook.png" width="21px" >
+				Share </a>  
+
+
+				<button style="margin: 5px" onclick="reload();" type="button" class="btn resulthead prcdbtn">Create new</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="section">
+		<div class="msgbody scrollbar"  id="style-5" >
+<!-- 			<button onclick="$.fn.fullpage.moveTo(2);" class="btn btn-link chngcntn" >Change content image</button>
+-->				<h4 class="heading" style="margin: 5px 0px;"">Style image</h4>
+<div class="msg-text">
+	<p style="margin: 5px 0px;">Upload your Style image or experiment with one of our own<br>
+	(You can always come back and try on your own image)</p>
+</div>
+<div class="col-lg-1 col-md-1"></div>
+
+<div class="swiper-container22 col-lg-10 col-md-12 contentslidercls ">
+	<div class="swiper-wrapper col-xs-10" style="margin-left: 4px">
+		<div class="swiper-slide"><img onclick="gallarystyleimg(this.src)" src="img/1-2.jpg" /></div>
+		<div class="swiper-slide"><img onclick="gallarystyleimg(this.src)" src="img/2-2.jpg" /></div>
+		<div class="swiper-slide"><img onclick="gallarystyleimg(this.src)" src="img/3-2.jpg" /></div>
+		<div class="swiper-slide"><img onclick="gallarystyleimg(this.src)" src="img/4-2.jpg" /></div>
+		<div class="swiper-slide"><img onclick="gallarystyleimg(this.src)" src="img/5-2.jpg" /></div>					
+	</div>
+	<div class="swiper-button-prev" style="display: none;"></div>
+	<div class="swiper-button-next" style="display: none;"></div>
+</div>
+
+<div  id="styleslider" class="col-lg-12 col-md-12 contentslidercls1" >
+	<center>
+
+		<br>
+		<label onclick="styleclick()" class="prcdbtn btn-bs-file btn  ">Upload your own image </label>
+		<hr>
+		<div class="col-lg-4 col-md-4 col-xs-6 showcontntimg" >
+			<span class="selectedimg">Selected content image</span>
+			<br>
+			<img id="contimgshow" class="contimgshow" onclick="$.fn.fullpage.moveTo(2);" title="click to change image" >
+
+		</div>
+		<div class="col" id="style-image"></div>
+							<div class="col">
+   								<img id="stymobtip" src="img/reposition-icon-mobile.png" class="mobtips">
+   								<img id="stytip" src="img/reposition-icon-web.png" class="tips">
+   							</div>
+   							<button onclick="rotatesty(90)"  style="padding:5px;display:none;" class="stylrot donprcdbtn btn">
+							<i class="fas fa-undo" style="font-size:16px"></i>
+						   </button>
+   							<button onclick="styledone()" style="display:none" id="stylwimgdone" class="donprcdbtn btn">Done</button>
+   							<button  onclick="rotatesty(-90)"  style="padding:5px;display:none;" class="stylrot donprcdbtn btn">
+					<i class="fas fa-redo" style="font-size:16px"></i>
+				   </button>
+   						</center>
+   					</div>
+   				</div>
+   			</div>
+
+   			<div class="section">
+   				<div class="msgbody3 scrollbar"  id="style-6" >
+   					<div class="row finalpage">
+   					<div class="col-lg-3 col-md-4 col-xs-6 col-lg-offset-3 col-md-offset-2">
+   						<span class="fselectedimg">Selected content image</span>
+   						<img id="finalcontent" title="click to change image" onclick="$.fn.fullpage.moveTo(2)" style="cursor: pointer;" width="100%"/>
+   					</div>
+
+   					<div class="col-lg-3 col-md-4 col-xs-6">
+   						<span class="fselectedimg">Selected style image</span>
+   						<img id="finalstyle"   title="click to change image" onclick="$.fn.fullpage.moveTo(3);" style="cursor: pointer;" width="100%" />
+   					</div>
+   					</div>
+   					<br>
+   					<div class="row">
+   					<div class="col-lg-12 col-md-12" >
+   						<form id="formid" action="javascript:;" onsubmit="befrajax()">
+   							<div class="form-group" id="unameinp">
+   								<h5 class="heading" for="usr">Your name</h5>
+   								<input id="uname" placeholder="Enter your name" type="text" class="form-control input-txt" id="usr" required onkeypress="search(event, this)">
+   							</div>
+   							<div class="form-group" id="emailinp" style="display: none;">
+   								<h5 class="heading" for="pwd" id="getmailid"></h5>
+   								<input id="uemail"  placeholder="Enter your mail" type="email" class="form-control input-txt" id="pwd" required>
+
+   							</div>
+   							<center style= "visibility: hidden;">
+   								<button type="submit" class="btn prcdbtn">upload</button>
+   							</center>
+   						</form>
+
+   						<div id="confirmtion" style="margin-top: 20px;text-align: center;display: none;">	
+   							<button onclick="confirmtion()" class="btn prcdbtn">Upload</button>
+   						</div>
+
+
+   						<div id="uploading" style="text-align: center;display: none;">	
+   							<br><img src="img/loadgdot.gif"> <br>
+   						</div>
+   						<div id="finished"  style="text-align: center;">	  	
+   						</div>
+   					</div>
+   				</div>
+   				</div>
+   			</div>
+
+   			<label style="display: none" id="contntfor" >Upload Content Image
+   				<input type="file" id="content-upload" accept=".jpg, .jpeg" />
+   			</label> 
+   			<label  style="display: none" id="stylefor" >Upload Style Image
+   				<input type="file" id="style-upload" accept=".jpg, .jpeg" />
+   			</label>
+   			<button  style="display:none" type="button" id="modal-login"  data-toggle="modal" data-target="#myModal">Open Modal</button>
+   		</div>
+
+   		<!-- LOGIN  POPUP MODAL -->
+   		<div class="modal fade" id="myModal" role="dialog">
+   			<div class="modal-dialog">
+   				<div class="modal-content">
+   					<div class="modal-header">
+   						<button type="button" class="close" data-dismiss="modal">&times;</button>
+   						<h4 class="heading">Your Details</h4>
+
+   					</div>
+   					<div class="modal-body">
+   						<form action="javascript:;" onsubmit="saveformval()">
+   							<div class="form-group row">
+   								<label for="inputEmail" class="userprf col-lg-3 col-md-3 col-form-label">Your email</label>
+   								<div class="col-lg-9 col-md-9">
+   									<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+   								</div>
+   							</div>
+   							<div class="form-group row">
+   								<label for="fullName" class="userprf col-lg-3 col-md-3 col-form-label">Your full name</label>
+   								<div class="col-lg-9 col-md-9">
+   									<input type="text" class="form-control" id="fullName" placeholder="Full name" required>
+   								</div>
+   								<div class="modal-footer" style="text-align: center;">
+   									<button type="submit" style="margin-top: 3%;" id="save" class=" btn prcdbtn" >Save Data</button>
+   								</div>
+   							</div>
+   						</form>       
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+
+   		<!-- help video -->
+   		<div class="modal fade" id="myhelpvdo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   			<div class="modal-dialog" role="document">
+   				<div class="modal-content">
+   					<div class="modal-body">
+   						<iframe id="iframeYoutube" width="100%" height="70%" src="https://www.youtube.com/embed/v7zpsdUgYFY" frameborder="0" allowfullscreen></iframe> 
+   					</div>
+   					<div class="modal-footer" style="text-align: center;">
+   						<button type="button" class="btn prcdbtn " data-dismiss="modal">Close</button>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+
+   		<!-- error msg -->
+   		<div class="modal fade" id="myerror" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   			<div class="modal-dialog" role="document">
+   				<div class="modal-content">
+   					<div class="modal-body" style="text-align: center;"">
+   						<h5>This format is not supported! Please upload the valid (.jpeg or .jpg) Image</h5>
+   					</div>
+
+   					<div class="modal-footer" style="text-align: center;" >
+   						<button type="button" class="btn prcdbtn" data-dismiss="modal">Close</button>
+   					</div>
+
+   				</div>
+   			</div>
+   		</div>
+
+	<div class="modal fade" id="leaveError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   			<div class="modal-dialog" role="document">
+   				<div class="modal-content">
+   					<div class="modal-body" style="text-align: center;"">
+   						<h5>Do you want to leave this site?</h5>
+   						<h5>Changes that you made may not be saved</h5>
+   					</div>
+   					<div class="modal-footer" style="text-align: center;" >
+   						<button id='leaveyes' type="button" class="btn prcdbtn" data-dismiss="modal">Yes</button>
+   						<button id='leaveno' type="button" class="btn prcdbtn" data-dismiss="modal">No</button>
+   					</div>
+
+   				</div>
+   			</div>
+   		</div>
+  	</body>
+   	<script async src="js/page.js"></script>
+   	<script src="js/croppie-new.js"></script>
+   	<script src="js/lightslider.js"></script>
+   	<script src="js/custom.js"></script>
+   	<script type="text/javascript">
+   		$(document).ready(function() {
+   			$('#fullpage').fullpage({
+   				css3: true,
+   				speed:100,
+   				loopHorizontal: false,
+   				easingcss3: 'ease',
+   				animateAnchor: true,
+   				lazyLoading: true,
+   			});
+
+   			$.fn.fullpage.setMouseWheelScrolling(false);
+   			$.fn.fullpage.setAllowScrolling(false);
+   			$.fn.fullpage.setKeyboardScrolling(false, 'up, down');
+   		});
+
+   		$(document).on('click', '#go', function(){
+   			$.fn.fullpage.moveSectionDown();
+   			$("#botimg").hide();
+   			$("#prfimg").fadeIn(3000);
+   			$(".head").addClass('aniback');
+   			$('.aniback').css('height','auto');
+   		});
+   	</script>
+   	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89929716-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-89929716-1');
+</script>
+   	
+</html>
