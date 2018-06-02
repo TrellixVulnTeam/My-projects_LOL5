@@ -1,0 +1,59 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Image and Video Processing</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>Image and Video Processing</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>Image/Video Processing was/is predominantly considered to be a
+				set of advanced signal processing algorithms applied to
+				images/videos to convert them to a state whereby inferences can be
+				made from them for various purposes.</p>
+			<br> <br>
+			<p>
+				Computer Vision, on the other hand, usually refers to the science of
+				extracting meaningful information from images/videos (usually
+				processed through various image/video processing techniques) which
+				solves a well-defined business case. Computer Vision is used to
+				solve “Hard” problems – problems for which well-defined algorithms
+				cannot provide precise mathematical solutions in an acceptable time
+				period. <br> <br>
+			<p>Machine Learning (Deep Learning), today, is capable of
+				replacing some Image Processing requirements and can solve a larger
+				set of Computer Vision problems. However, a careful selection of
+				tools and algorithms are required to solve any problem within a time
+				and at a cost which is relevant for the commercial problem on hand.
+			</p>
+			<br> <br>
+			<p>Whirldata works with customers to understand the
+				time-cost-accuracy trade-off and various other factors that may
+				impact the nature of the solution. Once this understanding is clear,
+				various carefully chosen combinations of image processing and
+				feature extraction methods are used to develop a ground-up solution.
+			</p>
+			<br> <br>
+			<p>Whirldata's team is capable of traditional image/video
+				processing approaches such as Scale Invariant Feature Tranformation
+				(SIFT), Harris Corner Detection/Transformations, Speed Up Robust
+				Feature(SURF), Oriented Fast Rotated Brief (ORB) and several others.
+				In addition, Whirldata has extensively used Convoluted Neural
+				Networks and various deep convolutional encoder-decoder architecture
+				based tools like SegNet to evaluate time-cost-accuracy trade-offs
+				for different commercial scenarios. In addition, every developer is
+				proficient with Python (with numpy) and C++ and between the team a
+				significant amount of knowledge base is available for calculus,
+				liner algebra, probability and statistics.</p>
+			<br> <br>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>

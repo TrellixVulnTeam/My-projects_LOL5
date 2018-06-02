@@ -1,0 +1,41 @@
+HOW TO SETUP CGI IN PC:
+
+
+1)sudo a2enmod cgi
+2)sudo service apache2 restart
+
+Now Open and edit the apache conf file cgi-enabled.conf using the below commands
+
+3)sudo vi /etc/apache2/conf-available/cgi-enabled.conf
+
+-----------Copy and Paste the Script to this file(cgi-enabled.conf file)---------
+                  <Directory "/var/www/html/coin_sorter">
+                          Options +ExecCGI
+                          AddHandler cgi-script .cgi .py
+                  </Directory>
+------------End File--------------------------------------
+
+
+4)sudo a2enconf cgi-enabled
+5)sudo service apache2 restart
+
+Now Create folder and python file inside that folder
+
+6)sudo mkdir /var/www/html/coin_sorter
+7)sudo vi index.py
+
+Content below content to index.py 
+
+#!/usr/bin/env python
+print "Content-type: text/html\n"
+print "<html><body><h1>Welcome to Whirldata</h1></body></html>"
+
+
+Change the file permission
+
+8)sudo chmod 777 index.py
+
+
+Open Browser and hit this url to test it
+
+9)http://localhost/coin_sorter/index

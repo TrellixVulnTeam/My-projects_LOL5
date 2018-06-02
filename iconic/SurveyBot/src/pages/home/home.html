@@ -1,0 +1,36 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Ionic Blank
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<button ion-button  (click)="startrecording()">
+		<ion-icon name="mic"></ion-icon>
+	</button> 
+
+	<ion-card>
+		<ion-card-content>
+			<ion-list>
+				<div *ngFor="let match of matches">
+					{{ match }}
+				</div>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+
+
+	<button ion-button id= "startrecording" (click)="startrecording()">start</button> 
+	<button ion-button id ="stoprecording" (click)="stoprecording()">stop</button> 
+
+	<button ion-button id ="stoprecording" (click)="checkCameraPermissions()">permission</button> 
+
+
+	<button ion-button id ="stoprecording" (click)="getPermission()">micpermission</button> 
+
+
+
+</ion-content>

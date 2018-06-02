@@ -1,0 +1,17 @@
+{
+	"email" : "User's email",
+	"botName" : "Bot name",
+	"awsAccessKey" : "User's aws access key",
+	"awsSecretKey" : "User's aws secret key",
+	"training" : [
+		{
+			"question" : "first question",
+			"answer" : "first answer"
+		},
+		{
+			"question" : "second question",
+			"answer" : "second answer"
+		}
+	]
+	
+}

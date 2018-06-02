@@ -1,0 +1,74 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Image and Video Processing</title>
+</head>
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+
+<div class="inner-content" id="section2">
+	<center>
+	<h1 class='page-title'>Tip of the day</h1>
+	<p>Author: Gopirengaraj C</p>
+	<hr>
+	</center>
+	
+	<div class="container inner-content-container">
+	<p><h3>Intro about “tf.Session()” in Tensorflow:</h3></p>
+	<p>
+The session is used to allocate memory and other resources like cpu’s and gpu’s.
+<br>
+Without creating session in tensorflow we can’t do any computations in the program.
+</p>
+<br> <br>
+<p><u>Example program to add to constants in Tensorflow</u></p>
+<br>
+<p>
+<pre><h5>
+import tensorflow as tf<br>
+a = tf.constant(5.0)      # a is constant<br>
+b = tf.constant(10.0)     # b is constant<br>
+add = a+b                 # add is a Operation<br>
+print(add) <h5> <br>
+</pre>
+</p>
+<br>
+<p>
+Now all the values and operations are added to the default graph, the graph just has the flow of computations and the graph for the above program is shown below
+</p>
+<br>
+<center>
+<img src="assets/images/session1.png"></center>
+<br>
+<p>Where Const and Const_1 are ‘a’ and ‘b’</p>
+<h5>Output</h5>
+<p>
+<pre>
+<h5>&lt Tensor("add:0", shape=(), dtype=int32) &gt</h5>
+</pre>
+</p>
+<p>
+(“This just says that “add” is tensor.”(i.e) “add variable is a matrix ,with the dtype int32 and its shape=(1,)”)
+<br>
+To compute the value of add ,we need to create a session to allocate the values for the constants
+<br><br>
+<u>creating session</u>
+</p>
+<p><pre><h5>sess = tf.Session()</h5></pre><p>
+<p>(Now we just allocate memory space for the constants)<br>
+<u>Executing the operations</u>
+</p>
+<p><pre><h5>sess.run(add)</h5></pre><p>
+<p>(now the values for “a” and “b” gets initialized and the value of “add” is calculated)<br><br><u>Output</u></p>
+<p><pre><h5>15.0</h5></pre><br></p>
+<p><u>close the session</u></p>
+<p><pre><h5>sess.close()</h5></pre></p>
+<p>(this will close the session and the memory will deallocated)</p>
+</div>
+</div>
+</div>
+<div class='footer'></div>
+<script src='js/jquery.min.js'></script>
+<script src="assets/main.js"></script>
+
+

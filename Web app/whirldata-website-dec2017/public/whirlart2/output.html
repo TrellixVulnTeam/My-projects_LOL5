@@ -1,0 +1,101 @@
+<html lang="en">
+<meta charset="utf-8">
+<title>WhirlArt</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://bootswatch.com/3/paper/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<link href="css/croppie.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container col-sm-12">
+		<div class="col-sm-12">
+			<img class="logo" src="img/logo.png">
+		</div>
+		<div id="bgtrig" class="ng-scope"></div>
+		<div class="home-landing">
+			<div class="col-sm-12">
+				<div class='col-sm-4'>
+					<div class='col-sm-12'>
+						<h2 class="second-legend">
+							Your <b class="blue-underline" style="">WhirlArt</b>
+							is Ready!
+						</h2>
+					</div>
+
+					<div id="resultstart" class="col-sm-12" style="text-align: center;">
+						<a id="downloadres" href="#" class="btn btn-primary" download>Download
+							result</a>
+						<button style="margin: 5px" onclick="reload();" type="button"
+							class="btn btn-primary">Create new</button>
+						<a id="fbshareclick"
+							style="text-decoration: none; background-color: #315096;"
+							class="btn btn-primary"> <img src="img/icon-facebook.png"
+							width="21px"> Share
+						</a>
+					</div>
+				</div>
+				<div class='col-sm-8'>
+					<div class="col-sm-4 ">
+						<div class="home-right-box col-xs-6 col-sm-12 rescontentimg">
+							<img id="fcontent" style="width: 100%" src="">
+						</div>
+						<div class="home-right-box col-xs-6 col-sm-12"
+							style="margin-top: 30px">
+							<img id="fstyle" style="width: 100%" src="">
+						</div>
+					</div>
+					<div class="col-sm-8 col-xs-12 home-right-box">
+						<div id="loadingres" style="display: none;">
+							<h5 style="text-align: center; ">Your image is under process. We'll send you the email whenever the process completed
+							</h5>
+							<center><img src="img/loadgdot.gif"></center>
+    					</div>
+						<img id="fresult" style="width: 100%" src="">
+ 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/croppie-new.js"></script>
+<script src="js/output.js"></script>
+<div class="col-sm-12 col-xs-12 footerp">
+	<hr>
+	<center>Powered by Whirldata</center>
+</div>
+<style type="text/css">
+#bgtrig {
+	border-bottom: 58vh solid transparent;
+}
+
+.footerp {
+	bottom: 0px;
+	position: absolute;
+}
+
+@media screen and (max-width:760px) {
+	.footerp {
+		bottom: 0px;
+		position: relative;
+	}
+	h2, .h2 {
+		font-size: 35px;
+	}
+	.rescontentimg {
+		margin-top: 30px;
+	}
+	.home-right-box {
+		padding: 15px;
+		margin-top: 20px !important;
+	}
+	.second-legend {
+		padding-top: 0px;
+		line-height: 35px;
+	}
+}
+</style>

@@ -1,0 +1,25 @@
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="asset/css/bootstrap.css" media="screen">
+<link rel="stylesheet" href="asset/css/custom.css" media="screen">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+	<div class="container">
+		<button class="btn btn-link pull-right" style="display: none"
+			onclick="logout()">Logout</button>
+		<h3 id="userName">Welcome to the store</h3>
+		<div id="responses" style="display:"></div>
+		<div id="thankYou" style="display: none">Thank you for your
+			response.</div>
+		<div id="wait" style="display: none">
+			Please wait, some one is using the device
+			<button onclick="refresh()" class='btn btn-link'>Refresh to
+				check</button>
+		</div>
+	</div>
+</body>
+<script src="asset/js/feedback.js"></script>
+<script src="asset/js/feedbackUser.js"></script>

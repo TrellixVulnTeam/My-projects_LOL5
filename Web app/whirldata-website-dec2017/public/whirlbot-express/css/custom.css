@@ -1,0 +1,174 @@
+.home-sub-text {
+	font-size: 16px;
+}
+
+.home-form {
+	padding-top: 10px;
+}
+
+h3 {
+	color: #5627EB;
+}
+
+.more-space-text {
+	line-height: 30px;
+}
+
+.second-legend {
+	padding-top: 50px;
+}
+
+.section-div {
+	/* 	border-right: 1px black solid; */
+	
+}
+
+.log-box {
+	height: 300px;
+	background-color: black;
+	margin-top: 10px;
+	padding-top: 10px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	line-height: 1.3;
+	overflow: scroll;
+}
+
+.log {
+	display: block;
+	color: white;
+}
+
+.successlog {
+	display: block;
+	color: #90FF33;
+}
+
+.faillog {
+	display: block;
+	color: #FF5E33;
+}
+
+#my_file_output {
+	font-weight: bold;
+	/* 	margin-top: 10px; */
+}
+
+.home-right-box {
+	/* 	background-color: #F9F9FF; */
+	padding: 30px;
+	border: 1px #5627EB solid;
+	border-radius: 5px;
+	margin-top: 70px;
+	padding: 30px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	transition: box-shadow 0.3s ease-in-out;
+	background-color: white;
+}
+
+.shadow:hover, .home-right-box:hover {
+	box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+}
+
+.logo {
+	height: 30px;
+	margin-top: 20px;
+}
+
+.home-landing {
+	margin-top: 5px;
+	/* 	height: 100%; */
+}
+
+.chat-agents {
+	max-height: 150px;
+	padding: 40px;
+}
+
+.chat-agents-container {
+	margin-top: 50px;
+}
+
+.promo-t1 {
+	font-size: 18px;
+}
+
+.blue-text {
+	color: #5627EB
+}
+
+.raise:hover {
+	box-shadow: 0 0.5em 0.5em -0.4em var(- -hover);
+	transition: transform 1s;
+	transform: translateY(-1.5em);
+}
+
+#bgtrig {
+	position: absolute;
+	top: -60;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 50vh solid transparent;
+	border-right: 90vh solid #5627EB;
+	border-bottom: 90vh solid transparent;
+	width: 0;
+}
+
+/* #bgtrig { */
+/* 	position: absolute; */
+/* 	border-bottom: 50vh solid #3dc0ff; */
+/* 	border-left: 18vw solid transparent; */
+/* 	width: 35vw; */
+/* 	top: 0; */
+/* 	right: 0; */
+/* 	z-index: -99991; */
+/* } */
+#bgtrig2 {
+	position: absolute;
+	border-bottom: 50vh solid #3dc0ff;
+	border-left: -18vw solid transparent;
+	width: 35vw;
+	top: 50vh;
+	right: 0;
+	z-index: -99991;
+}
+
+.home-section {
+	background-color: #00A0E3;
+	padding: 0;
+	/* 	border-bottom: 1px solid black; */
+	padding: 0;
+	background-color: #00A0E3;
+}
+
+.home-section-alt {
+	background-color: yellow;
+	padding: 0;
+	/* 	border-bottom: 1px solid black; */
+	padding: 0;
+}
+
+.home-section-title {
+	color: white;
+}
+
+#msg {
+	font-size: 18px;
+	color: #5627EB;
+}
+
+.use-case-box {
+	/* 	background-color: #F9F9FF; */
+	padding: 10px;
+	border: 1px #5627EB solid;
+	border-radius: 5px;
+	padding: 30px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	transition: box-shadow 0.3s ease-in-out;
+	background-color: white;
+}
+
+.use-case-box:hover {
+	box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+}

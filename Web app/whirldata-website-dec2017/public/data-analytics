@@ -1,0 +1,66 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Data Driven Intelligence</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>Data Analytics</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>Whirldata understands the power of using the right approach to
+				extract relevant insights from an accruing pile of data. It has been
+				known and accepted for the last several years that Business
+				analytics and business intelligence solutions can help improve the
+				decision-making capabilities of organizations, cut costs and
+				identify new business opportunities.</p>
+			<br> <br>
+			<p>In addition, with many organizations starting to explore and
+				deploy Machine Learning based solutions, Data Analytics as a field
+				of offering has taken on a more important role as the first step in
+				the development of any Machine Learning system is the ability to
+				visualize existing data. The right kind of visualization
+				significantly impacts the performance and accuracy of ML systems.</p>
+			<br> <br>
+			<p>Data Analytics, hence, is critical from 2 aspects – one by
+				itself and another by ensuring that expensive and powerful ML
+				systems that are built perform optimally when deployed. So any
+				effort at building and deploying analytical tools/solutions requires
+				the in-depth understanding of the business drivers that have led an
+				organization to consider the possibility of expanding the use of
+				data analytics tools/solutions.</p>
+			<br> <br>
+			<p>We, at Whirldata, always begin all our engagement with our
+				valuable customers by delving into the underlying business case and
+				then employ the use of the right tools/packages or custom-build a
+				new one from scratch. We look upon every engagement as a consulting
+				engagement irrespective of what the commercial models maybe and
+				ensure that we impart as much value in the development/deployment
+				process.</p>
+			<br> <br>
+			<p>Once have a good insight of the business case, we choose the
+				right tool/combinations of tools/custom build solutions for Data
+				Gathering, Cleansing, Integrating, Analyzing, Presenting and sharing
+				of data. Our team of data analysts and scientists constantly explore
+				various packagaes and databases and can advice on the optimal
+				combinations.</p>
+			<br> <br>
+			<p>A few of our capabilities include:</p>
+			<br> <br>
+			<li>Development using statistical and numerical packages in
+				Python
+			<li>R
+			<li>Qlik
+			<li>D3.js
+			<li>... <br> <br> <br> <br>
+				</p>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>

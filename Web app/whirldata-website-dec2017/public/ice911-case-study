@@ -1,0 +1,55 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | ice911-case-study</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>ICE911 Case Study</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>ICE911, a not-for-profit organization, specializing in
+				studying the melting rate of glaciers and protecting the glacial ice
+				melt collected weather and temperature data across various lakes and
+				glaciers through a serious of strategically placed Industrial IoT
+				sensors. The collected data was transmitted in a compressed form
+				over SMS.</p>
+			<br> <br>
+			<p>
+				<b>Challenge:</b>
+			</p>
+			<li>Monitor the polar sensors (pressure, voltage and
+				temperature)
+			<li>Transmitting data streamed from extreme terrains with
+				limited connectivity
+			<li>Gathering and staging the streamed time series IoT data from
+				multiple sensors
+			<li>Analyze, Model and visualize the data <br> <br>
+				<p>
+					<b>Technology Stack:</b>
+				</p>
+				<p>Amazon AWS [Lambda, Cloudwatch],Python, PHP, InfluxDB,
+					Grafana</p> <br>
+				<p>
+					<img src="assets/images/ICE911.png" height="80%" width="100%">
+				</p> <br>
+				<p>
+					<b>Solution:</b>
+				</p>
+			<li>Setup, configure and deploy AWS Lambda components to fetch
+				data streamed through SMS
+			<li>AWS components to curate data and stream to a structured
+				time series database on InfluxDB
+			<li>Present data through a secure Grafana system
+			<li>Outage monitors and alerts system with AWS cloud watch <br>
+			<br>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>

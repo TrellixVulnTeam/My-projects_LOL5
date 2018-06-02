@@ -1,0 +1,242 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>WhirlbotExpress | Frequently Asked Questions</title>
+</head>
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>WhirlbotExpress</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<div class="container">
+				<h4>
+					<p>
+						<b>STAND OUT FROM THE CROWD WITH WHIRLDBOT</b>
+					</p>
+				</h4>
+				<p>
+					WhircontainerlbotExpress – The DYI Chatbot engine from Whirldata.
+					No programming expertise is required Deploying a chatbots for your
+					business is as easy as &nbsp 1 . 2 . 3 and best of all – it is
+					FREE!!!<br>
+					<br> <b>Step 1:</b> Sign up for an AWS account with Amazon<br>
+					<b>Step 2:</b> Download the WBExpress Excel Template and fill in
+					the questions and <br> <b>Step 3:</b> Deploy your chatbots to
+					AWS by uploading the Excel Template<br> <br> Whirlbot
+					Express relies on the underlying technologies of AWS. The solution
+					is deployed on your very own AWS account. The chatbots engine is
+					free. You only pay for the AWS usage. This is purely usage based.
+					Click here to estimate your running costs. (Link: Cost Estimation
+					Calculator)<br> Click here to enter the exciting world of
+					one-click omnichannel chatbots by Whirldata
+				</p>
+				<h4>
+					<center>
+						<p>
+							<b>Frequently Asked Questions</b>
+						</p>
+					</center>
+				</h4>
+				<br>
+				<!-- <button onclick="bbtn()">close</button> -->
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo1"
+					style="background-color: #42a1f4">
+					<h5>It is AWS based. Does it work only on Echo/Alexa?</h5>
+				</button>
+				<div id="demo1" class="collapse">
+					<h5>Whirlbot Express is a omnichannel bot engine and the
+						engine can be deployed on Facebook, Alexa, Skype, Google Assistant
+						etc(XXX)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo2"
+					style="background-color: #42a1f4">
+					<h5>I’m not a programmer. Do I need to hire a programmer to
+						deploy this solution?</h5>
+				</button>
+				<div id="demo2" class="collapse">
+					<h5>no answer</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo3"
+					style="background-color: #42a1f4">
+					<h5>How much does the Whirlbot Express Cost?</h5>
+				</button>
+				<div id="demo3" class="collapse">
+					<h5>Nothing. The engine is provided free of cost.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo4"
+					style="background-color: #42a1f4">
+					<h5>What is the catch?</h5>
+				</button>
+				<div id="demo4" class="collapse">
+					<h5>No strings attached. No credit cards required. No accounts
+						to create.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo5"
+					style="background-color: #42a1f4">
+					<h5>Where does this chatbot run?</h5>
+				</button>
+				<div id="demo5" class="collapse">
+					<h5>It is deployed on your very own AWS account. We have no
+						access to your chatbots.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo6"
+					style="background-color: #42a1f4">
+					<h5>How much does it cost to run the engine?</h5>
+				</button>
+				<div id="demo6" class="collapse">
+					<h5>Click here to estimate your running costs. (Link: Cost
+						Estimation Calculator)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo7"
+					style="background-color: #42a1f4">
+					<h5>Is my data safe?</h5>
+				</button>
+				<div id="demo7" class="collapse">
+					<h5>Yes. Your data is yours. We do not access your data or
+						make copies. The template is used to create a template on your AWS
+						account. We will need the initial access key to create, deploy and
+						populate the chatbots engine. We strongly recommend that that you
+						create a separate access key for this purpose and disable the key
+						right after the Whirlbot Express engine is deployed. The chatbots
+						do not need this key for the functioning. Click here to learn
+						more. (link to security)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo8"
+					style="background-color: #42a1f4">
+					<h5>How does this work?</h5>
+				</button>
+				<div id="demo8" class="collapse">
+					<h5>Since we deploy this solution on your AWS account, we feel
+						that you have the right to understand how this tool works. Click
+						here to read about the various components and our solution
+						architecture. (link to design)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo9"
+					style="background-color: #42a1f4">
+					<h5>Is the solution open-sourced?</h5>
+				</button>
+				<div id="demo9" class="collapse">
+					<h5>No. The solution is free to use but the code base is not
+						open-sourced.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo10"
+					style="background-color: #42a1f4">
+					<h5>Do you provide support?</h5>
+				</button>
+				<div id="demo10" class="collapse">
+					<h5>Yes. Please contact us at info@whirldatascience.com for
+						more information.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo11"
+					style="background-color: #42a1f4">
+					<h5>Why do I need a chatbots?</h5>
+				</button>
+				<div id="demo11" class="collapse">
+					<h5>Read all about chatbots on our whirlbot page.</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo12"
+					style="background-color: #42a1f4">
+					<h5>What is “training a bot”?</h5>
+				</button>
+				<div id="demo12" class="collapse">
+					<h5>It is geek talk for teaching the chatbots how to respond
+						to various queries your users might have for your chatbots. Read
+						more about training and tuning here (link to training and
+						retraining instructions page)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo13"
+					style="background-color: #42a1f4">
+					<h5>Can you explain the three steps to create a Chatbot?</h5>
+				</button>
+				<div id="demo13" class="collapse">
+					<h5>
+						a.Create a AWS account with Amazon.com. Once you create it, go to
+						the security section and create a new security and access token.<br>
+						b. Download the WhirlbotExpress question template. Fill in all
+						possible questions your customers might ask the chatbots and
+						provide the answers. Don’t worry about minor English and grammar
+						variations. The engine is trained to handle that.<br> c.
+						Provide us your email address, the security keys and upload the
+						completed excel sheet. Click submit and wait for confirmation.
+						Once you have the confirmation, please do not forget to delete the
+						security access token from the AWS dashboard.
+					</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo14"
+					style="background-color: #42a1f4">
+					<h5>I need more details on the creation and deployment
+						process?</h5>
+				</button>
+				<div id="demo14" class="collapse">
+					<h5>Read more detailed steps with illustrations here (link to
+						installation)</h5>
+				</div>
+				<br>
+				<button type="button" onclick="bbtn()" class="btn btn-info"
+					data-toggle="collapse" data-target="#demo15"
+					style="background-color: #42a1f4">
+					<h5>I’m excited. Where do I start?</h5>
+				</button>
+				<div id="demo15" class="collapse">
+					<h5>Click here to enter the exciting world of one-click
+						omnichannel chatbots by Whirldata</h5>
+				</div>
+				<br>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#hide").click(function() {
+			$("p").hide();
+		});
+		$("#show").click(function() {
+			$("p").show();
+		});
+	});
+	function bbtn() {
+		$('.collapse.in').collapse('hide');
+	}
+</script>
+<!-- <script src='js/jquery.min.js'></script> -->
+<script src="assets/main.js"></script>

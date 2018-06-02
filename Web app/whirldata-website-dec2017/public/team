@@ -1,0 +1,88 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Team</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>Team</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<h3>Ara Ramalingam(Ara)</h3>
+			<h4>President</h4>
+			<a class="btn btn-primary"
+				href="https://www.linkedin.com/in/aramalingam/">Linkedin</a>
+			<p>Designing and building custom solutions is in his DNA. Speed
+				with relevance forms the basis of all his work. 18 years of
+				demonstrated experience rolling out products/solutions faster than
+				any competitor. His client list one to die for. Has perfected the
+				global development model. B.E(Comp Sc) from University of Madras and
+				an M.S (Comp.Sc) from American University.</p>
+			<br> <br>
+			<h3>B A Madhusudhan(Madhu)</h3>
+			<h4>Vice President - Strategy & Development</h4>
+			<a class="btn btn-primary"
+				href="https://www.linkedin.com/in/bamadhusudhan/">Linkedin</a>
+			<p>Deep understanding of fundamental concepts and technologies,
+				possesses the capability to view every requirement and solution with
+				a commercial perspective, phenomenal levels of curiosity with a
+				constant desire to learn. B.E(Comp. Sc), M.S(Comp Sc with a
+				specialization in numerical methods/statistics) and PGDM from
+				IIM-Ahmedabad. 17 exciting years across multiple domains.</p>
+			<br> <br>
+			<h3>MuthuPandian(Muthu)</h3>
+			<h4>Director - Technology</h4>
+			<a class="btn btn-primary"
+				href="https://www.linkedin.com/in/muthupandiant/">Linkedin</a>
+			<p>A professor turned geek, driven purely by the adrenalin rush
+				from implementing and deploying solutions based on new and advanced
+				technologies, balances processes and need for speed perfectly. 8
+				years of experience in the fields of management and technology.
+				Currently pusring his Ph.D. B.Tech (Information Technology) and MBA
+				from Anna University.</p>
+			<br> <br>
+			<h3>Nisanth Nair</h3>
+			<h4>Human Resources</h4>
+			<a class="btn btn-primary"
+				href="https://www.linkedin.com/in/nisanth-vidyadharan-4bb46416/">Linkedin</a>
+			<p>Nisanth’s experience in Human Resources spans across Talent
+				Management, Recruitment, Administration, Performance Management,
+				Employee Engagement, Statutory Compliance, Compensation & Benefits
+				etc. Nisanth strongly believes that the combination of attitude,
+				passion and technology will turns the key for right hiring. Nisanth
+				manages the Human Resources division of Whirldata. He holds a
+				Masters in Business Administration from Anna University, Chennai,
+				India and a Bachelors in Science specialised in Bio Technology from
+				Manonmaniam Sundaranar University, Tirunelveli, India.</p>
+			<br> <br>
+			<h3>Dr.Larry R Medsker PhD</h3>
+			<h4>Scientist & Advisor</h4>
+			<a class="btn btn-primary"
+				href="https://www.linkedin.com/in/larry-medsker-67747310/">Linkedin</a>
+			<p>Larry Medsker is a Research Professor of Physics and Director
+				of the Data Science graduate program at The George Washington
+				University. Dr. Medsker is a former Dean of the Siena College School
+				of Science, and a Professor in Computer Science and in Physics,
+				where he was a co-founder of the Siena Institute for Artificial
+				Intelligence. His research and teaching continues at GW on the
+				nature of humans and machines and the impacts of AI on society and
+				policy. Professor Medsker’s research in AI includes work on
+				artificial neural networks and hybrid intelligent systems. He is the
+				Public Policy Officer for the ACM SIGAI.</p>
+			<br> <br>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>
+<style type="text/css">
+.btn {
+	text-transform: none !important;
+}
+</style>
+>

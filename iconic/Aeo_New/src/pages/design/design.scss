@@ -1,0 +1,112 @@
+page-design {
+
+.no-scroll .scroll-content{
+     overflow: hidden;
+}
+
+.right{
+  position:absolute;
+    right: 2%;    
+     }
+ion-img {
+    background: none;
+}
+.close{
+    position:absolute;
+    right: 2%;    
+    margin: 1%;
+     }
+
+.close1{
+    position:absolute;
+    right: 2%;    
+     }
+
+.txtcancel{
+    right: 42%;   
+}
+
+.myClassName {
+    background: url(./assets/imgs/11.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    background-size: cover;
+}
+
+.image-container {
+        min-height: 300px;
+        background-size: cover;
+    }
+  @media (min-width: 0px) {
+        .images {
+            column-count: 2;
+        }
+    }
+ 
+    @media (min-width: 420px) {
+        .images {
+            column-count: 3;
+        }
+    }
+ 
+    @media (min-width: 720px) {
+        .images {
+            column-count: 4;
+        }
+    }
+ 
+    .one-image {
+        margin: 2px;
+    }
+
+ 
+ .overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.gallary{
+    top: 40%;
+    left: 50%;
+    width:30em;
+    height:30em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position:fixed;
+
+       }
+
+ .one-image1 {
+        border: 1px solid gray;
+        float:left;
+        margin: 6px;
+        width: 30%;
+    }
+   .dtitle{
+    font-size: large;
+    text-align: center;
+    height: 28px;
+    width: 100%;
+    color: white;
+    background-color: #343434;
+    }
+
+
+
+}

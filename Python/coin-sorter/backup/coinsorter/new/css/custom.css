@@ -1,0 +1,10 @@
+.utility, .coins, .stop, .loding ,.continueutil{
+	display: none;
+}
+
+.loding{
+	text-align:center;
+}
+.navbar-inverse .navbar-brand{
+	color: white;
+}

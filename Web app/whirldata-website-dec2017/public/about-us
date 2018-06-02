@@ -1,0 +1,56 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | About us</title>
+</head>
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1 class='page-title'>About us</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>
+				Whirldata, headquartered in Vienna, VA, and with a development
+				center in Chennai, provides intelligent data services with special
+				focus on Big Data, Artificial Intelligence, Machine Learning and
+				Deep Learning. <br> <br>In this connected world,
+				businesses have better access to information on who their customers
+				are, their behavior and preferences. However, the data is scattered
+				in silos, stored in different formats and systems and rarely talk to
+				each other, thus being rendered partly useless. This data, if
+				leveraged and integrated well, can help devise business strategies
+				to develop products and services relevant to customers, helping
+				address their pain points. <br> <br>Whirldata provides
+				data, analytics and artificial intelligence related business
+				solutions across industry segments. Right from Agriculture,
+				Manufacturing, E-Commerce and Textile to Fund Managers, Energy
+				Industry, and even Healthcare, our data scientists can help
+				organizations harness data and improve customer experience and
+				business efficiency by: <br> <br>
+			<li>Integrating data from multiple sources
+			<li>Cleaning
+			<li>Transforming
+			<li>Extracting insights <br> <br> <br> <br>Our
+				Data Scientists work with cloud providers and in house hardware to
+				optimize the best of breed infrastructure to support Big Data and
+				their analytics. The deep insights garnered from the data enable
+				businesses to devise meaningful product and services strategies. <br>
+				<br>We help our clients prospect new customers and retain
+				existing clients with intelligent data handling capabilities.
+				Visibility and visualization are key when it comes to presenting
+				data, we provide world class data analytics and insights on real
+				time data to help your clients understand their customer needs, run
+				their machineries better, fine tune their devices, optimize
+				healthcare and medication or grow better yields on their farms.
+				Whirldata makes scalable big data and artificial intelligence based
+				solutions available to small and medium size businesses at a very
+				affordable cost.
+				</p>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+<script src="assets/main.js"></script>

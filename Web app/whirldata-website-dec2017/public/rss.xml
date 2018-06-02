@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<rss version="2.0">
+  <channel>
+    <title>Science meets Business</title>
+    <link>https://whirldatascience.com</link>
+    <description />
+    <item>
+      <guid>https://whirldatascience.com/</guid>
+      <title>Science meets Business</title>
+      <link>https://whirldatascience.com/</link>
+      <description>At Whirldata, Artificial Intelligence and Neural Networks are not science projects. We help our clients harness the power of cognitive technologies to build commercially viable intelligent solutions</description>
+    </item>
+    <item>
+      <guid>https://whirldatascience.com/natural-language-processing</guid>
+      <title>natural-language-processing</title>
+      <link>https://whirldatascience.com/natural-language-processing</link>
+      <description />
+    </item>
+    <item>
+      <guid>https://whirldatascience.com/image-and-video-processing</guid>
+      <title>image-and-video-processing</title>
+      <link>https://whirldatascience.com/image-and-video-processing</link>
+      <description />
+    </item>
+    <item>
+      <guid>https://whirldatascience.com/data-analytics</guid>
+      <title>data-analytics</title>
+      <link>https://whirldatascience.com/data-analytics</link>
+      <description />
+    </item>
+    <item>
+      <guid>https://whirldatascience.com/conversational-user-experience</guid>
+      <title>conversational-user-experience</title>
+      <link>https://whirldatascience.com/conversational-user-experience</link>
+      <description />
+    </item>
+  </channel>
+</rss>
+<!--<guid value="05048cfb-1d26-43ec-8ba2-6c0199b4c032" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

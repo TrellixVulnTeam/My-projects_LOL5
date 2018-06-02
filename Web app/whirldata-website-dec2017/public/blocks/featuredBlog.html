@@ -1,0 +1,37 @@
+<div id="blogList"></div>
+<script>
+	var json = (function() {
+		var json = null;
+		$.ajax({
+			'async' : false,
+			'global' : false,
+			'url' : 'blogMeta.json',
+			'dataType' : "json",
+			'success' : function(data) {
+				json = data;
+				blogList = (json['allBlogsMeta']);
+				featuredBlogs=json['featuredBlogs'];
+				$.each(featuredBlogs, function(i, item) {
+					renderBlog(blogList(item));
+				});
+
+			}
+		});
+		return json;
+	})();
+
+	function renderBlog(blogData) {
+		blogString = "<a href='"+blogData['articleUrl']+"'><div class='articleBox col-sm-4'>"
+				+ "<div class='card'>"
+				+ "<img src='"
+				+ blogData['featuredImageUrl']
+				+ "' alt='Avatar' style='width: 100%'>"
+				+ "<div class='container' style='width: 100%'>"
+				+ "<b>"
+				+ blogData['title']
+				+ "</b> <br> <small>"
+				+ blogData['author']
+				+ "</small>" + "</div></div></div></a>";
+		$("#blogList").append(blogString);
+	}
+</script>

@@ -1,0 +1,42 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Contact us</title>
+</head>
+<link rel="stylesheet" href="assets/bootstrap.css">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/jquery.js"></script>
+<script src="assets/custom.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>Contact us</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>
+				<b>US Head Office</b>
+<br>39951 Fremont BLVD Apt. 318
+<br>Fremont, CA 94538
+<br>United States
+<br>O: +1-248-522-8223
+<br>F: +1-877.851.0310
+<br><br>
+<b>India(Offshore Development Centre)</b>
+<br>
+<br>Whirldata Labs
+<br>39, Block 1, Third Floor
+<br>SIDCO Electronics Complex
+<br>Guindy, Chennai 600 032
+<br>Tamilnadu, India
+<br>O: +91-44-42102050
+<br>M: +91 90037 51863
+
+<br>Email: info@whirldatascience.com
+				</p>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>

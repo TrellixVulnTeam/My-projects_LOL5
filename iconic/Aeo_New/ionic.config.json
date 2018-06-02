@@ -1,0 +1,8 @@
+{
+  "name": "AEO-new",
+  "app_id": "3976fa3c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coin sorter</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >Coin Sorter</a>
+    </div>
+
+    <button id="stop" class="btn btn-danger navbar-btn pull-right stop" onclick="stop()"><i class="fa fa-power-off"></i> stop</button>
+
+  </div>
+</nav>
+
+
+<div id="start" class="container jumbotron start">
+	<center>
+
+		<div class="form-group">
+  		<label for="usr"><b>Enter camera url :</b></label>
+  		<input type="text" class="form-control" id="urlinput" placeholder="enter camera url">
+		</div>
+		<button class="btn btn-lg btn-primary" onclick="start()">Calibrate</button>
+		<button class="btn btn-lg btn-info" onclick="main()">Start</button>
+	</center>
+	
+</div>
+
+
+<div id="loding" class="container jumbotron loding" >
+	<center >
+		<img  src="img/loadgdot.gif" width="10%" >
+	</center>
+</div>
+
+
+
+
+<div id="utility" class="container jumbotron utility ">
+	<center>
+		
+		<div class="col-sm-9 col-xs-12">
+			<img id="utility_img" src="" width="100%">
+		</div>
+<br>
+		<div class="col-sm-3 col-xs-12" style="margin-top: 10px;">
+			<button class="btn btn-lg btn-primary" onclick="start()">
+				<i class="fa fa-rotate-left" style="font-size: 30px;"></i>
+			</button>
+			<button id="continueutil" class="btn btn-lg btn-info continueutil" onclick="main()">
+				<i class="fa fa fa-check" style="font-size: 30px;"></i>
+			</button>
+			<h5 id="edgeinfo" class="text-danger">Edges not detected.. Try agin !<h5>
+		</div>
+
+	</center>
+</div>
+
+ 
+<div id="coins" class="container jumbotron coins">
+<!-- 	<center>
+		<div class="col-sm-2 col-xs-6">
+			<img src="img/1.png" width="100%">
+		<h2>10</h2>
+
+		</div>
+		<div class="col-sm-2 col-xs-6">
+			<img src="img/10.png" width="100%">
+			<h2>10</h2>
+		</div>	
+		
+		<div class="col-sm-2 col-xs-6">
+			<img src="img/5.png" width="100%">
+			<h2>10</h2>
+		</div>
+		
+		<div class="col-sm-2 col-xs-6">
+			<img src="img/25.png" width="100%">
+			<h2>10</h2>
+		</div>
+		<div class="col-sm-4" style="vertical-align: middle;">
+			<h2>Total  = 40</h2>
+		</div>
+		
+	</center> -->
+
+		<div class="col-xs-12">
+			<img id="coinsimg" src="" width="100%">
+		</div>
+
+</div>
+ 
+<script src="js/custom.js"></script>
+
+
+</body>
+</html

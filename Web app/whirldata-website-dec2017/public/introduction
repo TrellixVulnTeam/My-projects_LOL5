@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Whirldata | Intoduction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href="assets/bootstrap.css">
+    <link rel='stylesheet prefetch' href='https://alvarotrigo.com/fullPage/jquery.fullPage.css'>
+    <link rel='stylesheet prefetch' href='css/intro.css'>
+</head>
+
+<body>
+    <div id="headerContent"></div>
+    <div id="fullpage">
+        <section id="section1" class="section">
+            <div class="col-xs-12 text-center bg-img1" style="background-image: url('assets/images/home.svg')">
+            </div>
+        </section>
+
+
+
+        <section id="section3" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="content-container">
+                        <h3>Whirldata</h3>
+                        <p class="home-banner-desc">
+                            <li>Whirldata was established in July 2016 with a specific focus on R&D in AI-based solutions with spanning Cognitive Computing, Machine Learning and Data Sciences
+                                <li>A spin-off of Citrisys Solutions, a well-known ecommerce system integrator with 10+ years of expertise in the retail space
+                                    <li>Targeted initial 15 months - towards capability building, expansion of knowledge base of relevant fundamental technologies
+                                        <li>Headquartered in Fremont, CA
+                                            <li>Research and Development Center in Chennai, India to support and provide costeffective solutions
+                                                <li>University tie-ups in the US and India for continuous research support and internship programs
+                        </p>
+                    </div>
+                </div>
+                <div class=" col-sm-6  col-xs-12 bg-img-left" style="background-image: url('assets/images/thinkOSTB.svg')">
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="section ">
+            <div class="wd-section">
+                <div class="col-md-6 col-xs-12 text-center bg-img-right" style="background-image: url('assets/images/team-1.svg')">
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="content-container">
+                        <h3>Our Team</h3>
+                        <p class="home-banner-desc desc ">
+                            <li>Data Scientists
+                                <li>NLP Experts
+                                    <li>Advisory board of PhD’s
+                                        <li>QA automation experts
+                                            <li>E-commerce architects
+                                                <li>Amazon Certified cloud architects
+                                                    <li>Full stack developers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4" class="section ">
+            <div class="wd-section">
+                <div class="col-md-6 col-xs-12">
+                    <div class="content-container">
+                        <h3>Our Team</h3>
+                        <p class="home-banner-desc desc ">
+                            <h4>Ara Ramalingam(Ara)</h4>
+                            <a href="https://www.linkedin.com/in/aramalingam/">Linkedin</a>
+                            <br>
+                            <span>	Designing and building custom solutions is in his DNA. Speed
+with relevance forms the basis of all his work. 18 years of
+demonstrated experience rolling out products/solutions faster
+than any competitor. His client list is one to die for and his
+expertise spans across Retail and Pharma verticals. Has
+perfected the global development model.
+B.E(Comp Sc) from University of Madras and an M.S (Comp.Sc)
+from American University. </span>
+                        </p>
+
+                        <p class="home-banner-desc desc ">
+                            <h4>B A Madhusudhan(Madhu)</h4>
+                            <a href="https://www.linkedin.com/in/bamadhusudhan/">Linkedin</a>
+                            <br>
+                            <span>	Deep understanding of fundamental concepts and
+technologies, possesses the capability to view every
+requirement and solution with a commercial perspective,
+phenomenal levels of curiosity with a constant desire to learn.
+B.E(Comp. Sc), M.S(Comp Sc from University of Kentucky with
+a specialization in numerical methods/statistics) and PGDM
+from IIM-Ahmedabad. 17 exciting years across multiple
+domains. </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="content-container">
+                        <p class="home-banner-desc desc">
+                            <h4 class="ourteam">MuthuPandian(Muthu) </h4>
+                            <a href="https://www.linkedin.com/in/muthupandiant/">Linkedin</a>
+                            <br>
+                            <span>	A professor turned geek, driven purely by the adrenalin rush
+from implementing and deploying solutions based on new and
+advanced technologies, balances processes and need for
+speed perfectly. 8 years of experience in the fields of
+management and technology.
+Currently pusring his Ph.D. B.Tech (Information Technology)
+and MBA from Anna University. </span>
+                        </p>
+
+                        <p class="home-banner-desc desc ">
+                            <h4 class="ourteam">Thoufiq Kaleemullah</h4>
+                            <a href="https://www.linkedin.com/in/thoufiq/">Linkedin</a>
+                            <br>
+                            <span>	A seasoned professional services veteran with 17+ years of
+technology and cloud expertise. He draws upon his
+experience, of being a cloud architect, from big consulting
+houses and helps build robust cost effective cloud solutions.
+BE (Chemical Engineering) from Annamali University and M.S
+(Comp Sc) from American University. He is also a Amazon
+certified AWS Architect & Developer. </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="section4" class="section">
+
+            <div class="col-xs-12 text-center bg-img1" style="background-image: url('assets/images/clients.svg')">
+            </div>
+        </section>
+
+        <section id="section5" class="section gradiant">
+            <div class="wd-section ">
+                <center>
+                    <h1 class="">Capabilities</h1></center>
+                <div class="col-xs-12 ">
+                    <div class="content-container">
+                        <div class="col-sm-12 capability">
+
+                            <div class="col-sm-2"><img src="assets/images/conversationalUI.svg"></div>
+                            <div class="col-sm-3 capability-text">Conversational User Experience</div>
+
+                            <div class="col-sm-2"></div>
+
+                            <div class="col-sm-2"><img src="assets/images/dataDrivenIntelligence.svg"></div>
+                            <div class="col-sm-3 capability-text">Data Driven Intelligence</div>
+
+                        </div>
+                        <div class="col-sm-12 capability">
+
+                            <div class="col-sm-2"><img src="assets/images/cloudAws.svg"></div>
+                            <div class="col-sm-3 capability-text">Cloud & AWS</div>
+
+                            <div class="col-sm-2"></div>
+
+                            <div class="col-sm-2"><img src="assets/images/imgProcessing.svg"></div>
+                            <div class="col-sm-3 capability-text">Image and Video Processing</div>
+                        </div>
+                        <div class="col-sm-12 capability">
+
+                            <div class="col-sm-2"><img src="assets/images/deepLearning.svg"></div>
+                            <div class="col-sm-3 capability-text">Deep learning through Neural Networks</div>
+
+                            <div class="col-sm-2"></div>
+
+                            <div class="col-sm-2"><img src="assets/images/AR-VR.svg"></div>
+                            <div class="col-sm-3 capability-text">Augmented and Virtual Reality</div>
+                        </div>
+                        <div class="col-sm-12 capability">
+
+                            <div class="col-sm-2"><img src="assets/images/strategicConsulting.svg"></div>
+                            <div class="col-sm-3 capability-text">Strategic Consulting</div>
+
+                            <div class="col-sm-2"></div>
+
+                            <div class="col-sm-2"><img src="assets/images/dataCuration.svg"></div>
+                            <div class="col-sm-3 capability-text">Data Curation</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section6" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Conversational User Experience</h3>
+                        <p class="home-banner-desc">
+                            <li>Omni channel chatbots
+                                <li>Custom and off the shelf NLP engines
+                                    <li>Multiple v irtual assistant agent integrations (Echo, Google, Slack, Facebook and Skype)
+                                        <li>Custom web and mobile app agents
+                                            <li>Powered by AWS server-less architecture
+                                                <li>Option to host in-house or a cloud provider of the clients’ choice
+                        </p>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/standOut.svg')">
+                </div>
+            </div>
+        </section>
+
+        <section id="section7" class="section">
+            <div class="wd-section">
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/aeo.svg')"></div>
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>American Eagle Outfitters</h3>
+                        <p class=" home-banner-desc">Part of AEO’s efforts to expand channels of customer engagement by integrating their online, Amazon store and brick and mortar stores for greater synergy. </p>
+                        <li>The solution uses Amazon Echo/Go o gle H o m e to integrate customers account and CSR knowledge-base to provide a seamless hands-free interface through voice assistants and conversational chatbots
+                            <li>An augmented reality solution on customer phones to harness the data available on the online sites and provide and data rich experience for the brick and mortar shoppers
+                                <li>A custom VR platform to engage shoppers during special events at flagship stores
+
+                                    <p class=" home-banner-desc">
+                                        Technology Stack: Amazon AWS [Lambda, Lex, Cloudwatch, S3, Ec2], Node.js, Python, Ionic, TensorFlow
+                                        <br>Hig hlig h t s: Voice assited virtual Assitants, Facebook Chatbots, Augmented reality for in-store experience, VR experience for special events
+                                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section8" class="section">
+            <div class="col-xs-12 text-center bg-img-full" style="background-image: url('assets/images/AEO.png')">
+            </div>
+        </section>
+
+        <section id="section9" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Future Group</h3>
+                        <p class=" home-banner-desc">Amongst the 3 companies selected by Future group to be their technology partner for jointly exploring new technologies</p>
+                        <p class=" home-banner-desc">Cognitive solution for improving customer conversion for both online and in-store. Part of Kishore Biyani’s Retail 3.0 initiative to blend technology with brick-and-mortar</p>
+
+                        <li>Integrate virtual assistants and chatbots to engage customers through a custom built natural language engine
+                            <li>Architect a cloud based intelligent platform to support various cognitive activities including image/video recognition
+                                <li>Store management reports , data and transactions through voice interfaces
+
+                                    <p class=" home-banner-desc">
+                                        Technology Stack: Amazon AWS [Lambda, Lex DynamoDB, Cloudwatch], Google Home</p>
+
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/future.svg')">
+                </div>
+            </div>
+        </section>
+
+        <section id="section10" class="section  gradiant">
+            <div class="col-xs-12 text-center bg-img2" style="background-image: url('assets/images/FutureGroup.png')">
+            </div>
+        </section>
+
+        <section id="section11" class="section">
+            <div class="wd-section">
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/aws.svg')"></div>
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Cloud & AWS</h3>
+                        <li>Deep understanding of the AWS stack gained through implementation of various client solutions
+                        <li>AWS Certified technologists & Architects
+                        <li>Multi-platform integration expertise across enterprise software, big data solutions, IoT and analytical tools
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section12" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Aveza</h3>
+                        <p class=" home-banner-desc">Improve the relevance of advertisement placement and provide a fail-safe platform for advertisers/advt.- managers to view the consumption and effectiveness of the ads</p>
+                        <p class=" home-banner-desc">Serverless big data cloud solution to handle and analyze large volume of advt. trackers on YouTube video channels for Roku & FireTV</p>
+
+                        <li>Complete AWS based solution stack
+                            <li>Optimize monthly cloud usage costs
+                                <li>Handle high volume ad serving data
+                                    <li>Validate against third party advt. vendor reports
+                                        <li>Analyze and optimize advt. serving
+                                            <p class=" home-banner-desc">Technology Stack: Amazon AWS [Lambda, Kinesis, DynamoDB, Cloudwatch, Glacier] </p>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/aveza.svg')">
+                </div>
+            </div>
+        </section>
+
+
+  <section id="section13" class="section  gradiant">
+            <div class="col-xs-12 text-center bg-img2" style="background-image: url('assets/images/Aveza.png')">
+            </div>
+        </section>
+
+
+
+
+   <section id="section14" class="section">
+            <div class="wd-section">
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/ice911.svg')"></div>
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>ICE911</h3>
+                        <p class=" home-banner-desc">ICE911 is a non-profit working on studying and reducing
+melting rate of glaciers</p>
+
+<p class=" home-banner-desc">
+AWS solution to monitor and analyze time-series data
+from polar temperature sensors</p>
+                        <li>Solution to compare outcomes of various on the
+ground activities to help optimize the prevention of
+glacial melts
+                        <li>Setup a cloud infrastructure to handle IoT data from
+arctic temperature sensors
+                        <li>Present collected data through quick responding and
+customized reporting systems
+ <p class=" home-banner-desc"> Technology Stack: Amazon AWS [Lambda, Cloudwatch],Python, PHP, InfluxDB, Grafana </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+  <section id="section15" class="section  gradiant">
+            <div class="col-xs-12 text-center bg-img2" style="background-image: url('assets/images/ICE911.png')">
+            </div>
+        </section>
+
+
+
+
+
+  <section id="section16" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Data Driven Intelligence</h3>
+                        
+                        <li>Improve decision making capabilities of
+clients backed by structured reporting
+and data presentation
+                            <li>Mining for intelligence to extract
+actionable insights
+                                <li>Neural networks and deep learning
+integrations
+                                    <li>Expertise on various visualization tools
+like Qlik, PowerBI, IBM Watson and
+customization platforms like Grafana,
+Superset and D3.js
+                                     
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/dataDrivenIntelligenceBig.svg')">
+                </div>
+            </div>
+        </section>
+
+
+
+  <section id="section17" class="section">
+            <div class="wd-section">
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/dyzaro.svg')"></div>
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Dyzaro</h3>
+                        <p class=" home-banner-desc">Platformtomeasureandmonitorperformanceofapplications/infrasructure</p>
+
+<p class=" home-banner-desc">Custom built log analyzer and reporting framework for a
+Bay area startup</p>
+                        <li>Structure data streams from various data points such as
+operating system vitals, database parameters, JVM
+heap and memory glacial melts
+                        <li>Detailed log analysis with anomaly detection using
+machine learning algorithms
+                        
+ <p class=" home-banner-desc">Technology Stack: PHP, TICK ( Telegraf , Influx DB, Chronograf, Kapacitor), Grafana </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+  <section id="section18" class="section">
+            <div class="wd-section">
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>Whiz.ai</h3>
+                        <p class=" home-banner-desc">Conversational interface for a BI system</p>
+                          <li>Custom built NLP engine trained on domain specific data
+                            <li>Chatbot interfaces through standard chat clients and custom built browser plug-ins
+                                <li>Data scrubbing and cleansing – cost effective offshore service
+                                    <li>Training of deep learning neural network models for
+data look-up models and language translations
+                                            <p class=" home-banner-desc">Technology Stack: Ruby on Rails, Python ,TensorFlow,SuperSet </p>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/whiz.svg')">
+                </div>
+            </div>
+        </section>
+
+
+ <section id="section5" class="section">
+            <div class="wd-section ">
+                <center>
+                    <h3 class="">Our technical capabilities in the cognitive world include:</h3></center>
+
+<div class="col-sm-12">
+       <div class="col-sm-1 empty-tech"></div>
+
+                <div class="col-sm-3 content-box-gray ">
+    <div class="title">Business Intelligence</div>
+
+    <div class="content">
+    	Qlik<br>
+    	PowerBI<br>
+    	IBM Watson<br>
+    		Grafana<br>
+    	Druid<br>
+    	Jasper<br>
+    	Grafana<br>
+    	Superset<br>
+    	Statistics<br>
+</div>
+</div>
+
+
+
+  <div class="col-sm-3 content-box-gray ">
+    <div class="title">Artificial Intelligence</div>
+    <div class="content">
+    	TensorFlow<br>
+    	Caffe<br>
+    	Theano<br>
+    	Keras<br>
+    	NLP<br>
+    	IBM Watson tools<br>
+    	Calculus<br>
+</div>
+</div>
+
+
+  <div class="col-sm-3 content-box-gray ">
+    <div class="title">V.A.s & Chatbots</div>
+
+    <div class="content">
+    	Amazon Lex + Polly<br>
+    	API.ai<br>
+    	Alexa Skills<br>
+    	Google Home<br>
+    	IBM Watson tools<br>
+    	FB & Slack bots<br>
+</div>
+</div>
+
+</div>
+
+<div class="col-sm-12 technical-cap2">
+
+<div class="col-sm-1 empty-tech"></div>
+ <div class="col-sm-3 content-box-gray ">
+    <div class="title">Languages and tools </div>
+
+    <div class="content">
+    	R<br>
+    	Python<br>
+    	NodeJS<br>
+    	PHP<br>
+    	Ruby & RoR<br>
+    	Java<br>
+    	JS tools<br>
+    	Spring Boot<br>
+</div>
+</div>
+
+    <div class="col-sm-3 content-box-gray ">
+    <div class="title">User Experience</div>
+
+    <div class="content">
+    	AngularJS<br>
+    	D3.js<br>
+    	Ionic<br>
+    	Native iOS<br>
+    	Native Android<br>
+    	Fabric.js<br>
+    	
+</div>
+</div>
+
+
+ <div class="col-sm-3 content-box-gray ">
+    <div class="title">Databases & Big data</div>
+
+    <div class="content">
+    	MongoDB<br>
+    	DynamoDB<br>
+    	InfluxDB<br>
+    	Hadoop Ecosystem<br>
+    	Traditional RDBMS<br>
+    	AWS S3<br>
+    	AWS Glacier<br>
+</div>
+</div>
+</div>
+
+</div>
+     </section>
+
+
+
+<section id="section17" class="section">
+            <div class="wd-section">
+                <div class=" col-sm-6 col-xs-12 bg-img" style="background-image: url('assets/images/endcard.svg')"></div>
+
+                <div class="col-sm-6 col-xs-12 ">
+                    <div class="content-container">
+                        <h3>US Headoffice</h3>
+                        <p class=" home-banner-desc">Whirldata Inc</p>
+                        <p class=" home-banner-desc">39951 Fremont Bld, Ste 318</p>
+                        <p class=" home-banner-desc">Fremont CA 94538</p>
+                        <p class=" home-banner-desc">Ph: +1.248.522.8223</p>
+                        <hr>
+                         <h3>India R&D Center</h3>
+                        <p class=" home-banner-desc">Whirldata Labs</p>
+                        <p class=" home-banner-desc">39, Block 1, </p>
+                        <p class=" home-banner-desc">Third Floor</p>
+                        <p class=" home-banner-desc">SIDCO Electronics Complex</p>
+                        <p class=" home-banner-desc">Guindy, Chennai 600 032</p>
+                        <br>
+                         <p class=" home-banner-desc">info@whirldatascience.com</p>
+                </div>
+            </div>
+            </div>
+<<<<<<< HEAD
+
+
+
+
+        </section>
+
+
+
+
+
+
+        <section id="section19" class="section">
+            <div class="wd-section ">
+                <div class='footer'></div>
+            </div>
+        </section>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+=======
+        </section>
+
+		<section id="section19" class="section">
+			<div class="wd-section ">
+				<div id="footerContent" class='footer'></div>
+			</div>
+		</section>
+
+    </div>   
+    <script src='js/jquery.min.js'></script>
+>>>>>>> a9e411d0b8e993c821843e4fdde398560076c337
+    <script src='https://alvarotrigo.com/fullPage/jquery.fullPage.min.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> a9e411d0b8e993c821843e4fdde398560076c337

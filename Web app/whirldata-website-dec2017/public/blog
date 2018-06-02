@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Whirldata | Services</title>
+</head>
+<style>
+.container {
+	height: 100px;
+}
+</style>
+<body>
+	<div id="headerContent"></div>
+	<div class="body-container">
+		<div class="inner-content" id="section2">
+			<center>
+				<h1 class='page-title'>
+					Blogs
+					<hr>
+				</h1>
+			</center>
+			<div class="container inner-content-container">
+				<div id="blogList"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footerContent" class='footer'></div>
+</body>
+<script src='js/jquery.min.js'></script>
+<script src="assets/main.js"></script>
+<script>
+	var json = (function() {
+		var json = null;
+		$.ajax({
+			'async' : false,
+			'global' : false,
+			'url' : 'blogMeta.json',
+			'dataType' : "json",
+			'success' : function(data) {
+				json = data;
+				blogList = (json['allBlogsMeta']);
+				$.each(blogList, function(i, item) {
+					renderBlog(item);
+				});
+
+			}
+		});
+		return json;
+	})();
+
+	function renderBlog(blogData) {
+		blogString = "<a href='"+blogData['articleUrl']+"'><div class='articleBox col-sm-4'>"
+				+ "<div class='card'>"
+				+ "<img src='"
+				+ blogData['featuredImageUrl']
+				+ "' alt='Avatar' style='width: 100%'>"
+				+ "<div class='blog-container' style='width: 100%'>"
+				+ "<b>"
+				+ blogData['title']
+				+ "</b> <br> <small>"
+				+ blogData['author']
+				+ "</small>" + "</div></div></div></a>";
+		$("#blogList").append(blogString);
+	}
+</script>

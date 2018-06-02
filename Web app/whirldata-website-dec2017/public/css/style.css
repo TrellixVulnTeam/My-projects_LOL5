@@ -1,0 +1,38 @@
+/* DEMO styles. Not needed. */
+section {
+  background-color: #563d7c;
+}
+section h1,
+section h2,
+section h3 {
+  color: #fff;
+  font-size: 5vw;
+}
+section h1 small,
+section h2 small,
+section h3 small {
+  color: rgba(255, 255, 255, 0.75);
+}
+section p,
+section a,
+section .lead {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5vw;
+}
+section a {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.75);
+}
+section {
+  background-size: cover;
+  background-position: center center;
+}
+#section1 {
+  background-color: #563d7c;
+}
+#section2 {
+  background-color: #000;
+}
+#section3 {
+  background-color: #563d7c;
+}

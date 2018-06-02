@@ -1,0 +1,322 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<div id="container2" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<script>
+$.get('data.csv', function(csv) {
+    var a = csv.split("\n")
+    console.log(a)
+    var dates = a[0].split(",");
+    var sales = a[1].split(",").map(parseFloat)
+    var qty = a[2].split(",").map(Number)
+    var mfRat=a[3].split(",").map(parseFloat)
+    var ffRat=a[4].split(",").map(parseFloat)
+    var boRat=a[5].split(",").map(parseFloat)
+    var bpRat=a[6].split(",").map(parseFloat)
+    //console.log(qty)
+Highcharts.chart('container', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: '8 BTU Ratings Vs Sales and Qty Sold (2017)'
+    },
+    subtitle: {
+        text: 'Source: Whirldata'
+    },
+    xAxis: [{
+        categories: dates,
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value} Stars',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+
+        title: {
+            text: 'Rating',
+            color:'red',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+
+    },
+	 { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: 'SaleValue',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        max: 10000,
+        labels: {
+            format: '$ {value}',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+
+    }, /*{ // Tertiary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: '# of Items Sold',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        labels: {
+            format: '{value}',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+    }*/],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Sales',
+        type: 'column',
+        yAxis: 1,
+        data: sales,
+        tooltip: {
+            valuePrefix: '$ '
+        }
+
+    }, /*{
+        name: 'Items Sold(Qty)',
+        type: 'spline',
+        yAxis: 2,
+        data: qty,
+        marker: {
+            enabled: false
+        },
+        dashStyle: 'shortdot',
+        tooltip: {
+            valueSuffix: ''
+        }
+
+    },*/ {
+        name: 'MF08CESWW Rating',
+        type: 'spline',
+        data: mfRat,
+        color:'aqua',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+	
+
+    },
+    {
+        name: 'FFPA0822R1',
+        type: 'spline',
+        data: ffRat,
+        color:'maroon',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'B01FMAVCDQ',
+        type: 'spline',
+        data: boRat,
+        color:'#FF3333',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'BPACT08WT',
+        type: 'spline',
+        data: bpRat,
+        color:'#FF9090',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    }]
+})
+})
+
+$.get('data2.csv', function(csv) {
+    var a = csv.split("\n")
+    var dates = a[0].split(",")
+    var sales = a[1].split(",").map(parseFloat)
+    var qty = a[2].split(",").map(Number)
+    var mnRat=a[3].split(",").map(parseFloat)
+    var ttRat=a[4].split(",").map(parseFloat)
+    var lpRat=a[5].split(",").map(parseFloat)
+    var boRat=a[6].split(",").map(parseFloat)
+    var ypRat=a[7].split(",").map(parseFloat)
+    var ffRat=a[8].split(",").map(parseFloat)
+    //console.log(qty)
+Highcharts.chart('container2', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: '10 BTU Ratings Vs Sales and Qty Sold (2017)'
+    },
+    xAxis: [{
+        categories: dates,
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value} Stars',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        title: {
+            text: 'Rating',
+            color:'red',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+
+    },
+     { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: 'SaleValue',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        max: 50000,
+        labels: {
+            format: '$ {value}',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+
+    }, /*{ // Tertiary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: '# of Items Sold',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        labels: {
+            format: '{value}',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+    }*/],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Sales',
+        type: 'column',
+        yAxis: 1,
+        data: sales,
+        tooltip: {
+            valuePrefix: '$ '
+        }
+
+    }, /*{
+        name: 'Items Sold(Qty)',
+        type: 'spline',
+        yAxis: 2,
+        data: qty,
+        marker: {
+            enabled: false
+        },
+        dashStyle: 'shortdot',
+        tooltip: {
+            valueSuffix: ''
+        }
+
+    },*/ {
+        name: 'MN10CESWW',
+        type: 'spline',
+        data: mnRat,
+        color:'#00B2EE',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    
+
+    },
+    {
+        name: 'TT-ACP10C01',
+        type: 'spline',
+        data: ttRat,
+        color:'maroon',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'LP1013WN',
+        type: 'spline',
+        data: lpRat,
+        color:'#FF3333',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'B01FMAVBAA',
+        type: 'spline',
+        data: boRat,
+        color:'#FF9090',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'YPL3-10C',
+        type: 'spline',
+        data: ypRat,
+        color:'#E3170D',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    },
+    {
+        name: 'FFPA1022T1',
+        type: 'spline',
+        data: ffRat,
+        color:'#FF5333',
+        tooltip: {
+            valueSuffix: ' Stars'
+        }
+    }]
+})
+});
+</script>

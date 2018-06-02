@@ -1,0 +1,324 @@
+body {
+	font-family: "Roboto", sans-serif;
+	line-height: 18px;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 48px;
+}
+
+.logo-img {
+	width: 180px;
+}
+
+.wd-blue {
+	background-color: #00A0E3;
+	position: relative;
+	height: 100%;
+	right: 0;
+}
+
+.wd-yellow {
+	position: relative;
+	height: 100%;
+}
+
+.alt {
+	color: white !important;
+}
+
+.home-banner-left {
+	margin-top: 180px;
+	margin-left: 80px;
+}
+
+.img-container {
+	background-color: white;
+}
+
+.bg-img {
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+	background-size: 90%;
+}
+
+.home-section-img {
+	height: 100%;
+	width: 100%;
+}
+
+.content-container {
+	margin-top: 29%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.wd-section {
+	height: 100% !important;
+}
+
+.first {
+	/* 	margin-top: 150px; */
+	margin-left: 50px;
+}
+
+.wd-yellow {
+	background-color: yellow;
+}
+
+.navbar-brand {
+	position: fixed;
+	top: 0px;
+	z-index: 999999;
+}
+
+.home-banner-left {
+	padding: 0;
+	color: #6200EA;
+}
+
+.small-divider {
+	width: 20%;
+	align: left;
+	border-top: 2px solid #6200EA;
+	margin: 0;
+	margin-bottom: 70px;
+}
+
+.home-banner-desc, p, li {
+	color: gray;
+	font-weight: 100;
+	font-size: 22px;
+	line-height: 37px;
+	letter-spacing: 0.054em;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.btn-primary {
+	background-color: #6200EA;
+}
+
+.right-menu-fixed {
+	position: fixed;
+	top: 0;
+	background-color: white;
+	z-index: 9999999;
+	height: 100%;
+	right: -1000px;
+}
+
+.icon-menu {
+	width: 60px;
+	position: fixed;
+	right: 0;
+	margin: 50px;
+	z-index: 9999999;
+}
+
+.inner-content-container {
+	/* 	 position: absolute; */
+	margin-top: 70px;
+}
+
+.page-title {
+	position: relative;
+	width: 60%;
+}
+
+.mask {
+	display: none;
+	opacity: 0.7;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: black;
+	z-index: 999998;
+	height: 100%;
+	opacity: 0.8;
+}
+
+.accordion-content {
+	display: none;
+}
+
+.accordion-title {
+	font-size: 16px;
+}
+
+.accordion-title:HOVER {
+	cursor: pointer;
+	cursor: hand;
+}
+
+hr {
+	margin: 10px;
+}
+
+#services-mini {
+	margin-top: 20px;
+}
+
+.accordion-content {
+	color: gray;
+	font-weight: 100;
+	font-size: 22px;
+	line-height: 20px;
+	letter-spacing: 0.054em;
+	font-size: 14px;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.home-section {
+	height: 100%;
+	background-color: #00A0E3;
+	padding: 0;
+	/* 	border-bottom: 1px solid black; */
+	padding: 0;
+	background-color: #00A0E3;
+}
+
+.home-section-alt {
+	background-color: yellow;
+	padding: 0;
+	height: 100%;
+	/* 	border-bottom: 1px solid black; */
+	padding: 0;
+}
+
+.home-section-title {
+	color: white;
+}
+
+.big-link {
+	color: white;
+}
+
+.big-link:hover {
+	color: yellow;
+	text-decoration: none;
+}
+
+.big {
+	padding: 30px;
+}
+
+.Header-BG {
+	display: none;
+	z-index: 9999999;
+	position: fixed !important;
+	top: 0; : 0;
+	width: 100%;
+	height: 300px;
+	opacity: 0.8;
+	transition: opacity 100ms;
+	background: linear-gradient(rgba(0, 70, 136, 0.5),
+		rgba(0, 70, 136, 0.35), rgba(0, 70, 136, 0.1), rgba(0, 70, 136, 0));
+	position: absolute;
+	position: absolute;
+	z-index: 9999999;
+}
+
+.address-content {
+	color: white;
+}
+
+.social-icon {
+	padding: 10px;
+	margin-top: 20px;
+	/* 	height:50px; */
+}
+
+.address, .big {
+	height: auto !important;
+	padding: 25px;
+}
+
+.address {
+	background-color: black;
+}
+
+.footer-img {
+	height: 250px;
+}
+
+@media ( max-width : 575px) {
+	.page-title {
+		position: relative;
+		width: 60%;
+	}
+	.logo-img {
+		width: 95px !important;
+		margin: -13px;
+	}
+	.icon-menu {
+		margin: 20px;
+		margin-top: 30px;
+	}
+	.home-banner-left {
+		margin-top: 110px;
+		margin-left: 20px;
+	}
+	.icon-menu, .close-button {
+		width: 40px;
+	}
+	h1 {
+		/* 		font-size: 22px; */
+		
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 14px;
+	}
+	h4 {
+		font-size: 8px;
+	}
+	.home-banner-desc, p, li {
+		font-size: 12px;
+		line-height: 30px;
+		letter-spacing: 0.054em;
+	}
+	.small-divider {
+		margin-bottom: 40px;
+	}
+	.bg-img {
+		height: 0;
+	}
+	.footer-img {
+		height: 100px;
+	}
+	.home-section-title {
+		padding-top: 50px;
+	}
+}
+
+h1 {
+	font-size: 3.9vw;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blog-container {
+	padding: 2px 16px;
+}
+
+.articleBox {
+	margin-bottom: 30px;
+}
+.blog-container {
+	height: 90px;
+}

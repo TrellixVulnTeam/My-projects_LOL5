@@ -1,0 +1,218 @@
+<html lang="en">
+<meta charset="utf-8">
+<title>WhirlArt</title>
+<head>
+<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<link href="css/croppie.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="col-sm-12">
+		<div class="col-sm-12">
+			<img class="logo" src="img/logo.png">
+		</div>
+		<div id="bgtrig" class="ng-scope"></div>
+		<div class="home-landing">
+			<div class='col-sm-6'>
+				<h2 class="second-legend">
+					Create famous <b class="blue-underline" style="">WhirlArt</b>
+					painting by using Computer brain
+				</h2>
+				<h4 class="more-space-text">WhirlArt helps you to turn your
+					photo into interesting Painting</h4>
+				<center>
+					<hr>
+					<div class="col-sm-12">
+					<img class="how-it-works" src="img/how-it-works.png" >
+					</div>
+				</center>
+			</div>
+			<div class='col-sm-6'>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-10 home-right-box">
+					<img style="width: 100%" src="img/3.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--  CONTENT IMAGE SECTION-->
+	<div class="col-sm-12" style="padding: 0px">
+		<div class="col-sm-12 contentdiv" id="contentdiv">
+			<center>
+				<h2 class="blue-text">Pick your image</h2>
+				<hr>
+				<div id="nocont_img_info" style="display: none; margin-bottom: 20px">
+					<h5 style="color: red">
+						<strong>Info!</strong> Please upload image
+					</h5>
+				</div>
+				<div class="col-sm-12">
+					<div class="col-sm-4">
+						<h5>Upload your own Content image or use one of our own to
+							experiment</h5>
+						<span style="font-size: 16px;">(You can always come back
+							and try on your own image)</span>
+					</div>
+					<div class="col-sm-4">
+						<div id="content-image"></div>
+						<button class="upload-btn btn btn-primary" style="background-color:#717171;" 
+							onclick="$('#contntfor').click();">Upload your own</button>
+						<button id="contentnxt" class="btn btn-primary upload-btn" onclick="scrolltodiv('stylediv')"
+						 style="display: none;background-color:#2fd5ae;">
+							<i class="fa fa-arrow-right" style="font-size:23px;color:white"></i>
+						</button>
+					</div>
+					<div class="col-sm-4 col-xs-12">
+						<div class="content col-sm-6 col-xs-3">
+							<img id="contentImage" class="img-cnt" src="img/1-1.jpg"
+								onclick="gallarycontentimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img id="contentImage" class="img-cnt" src="img/2-1.jpg"
+								onclick="gallarycontentimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img id="contentImage" class="img-cnt" src="img/3-1.jpg"
+								onclick="gallarycontentimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img id="contentImage" class="img-cnt" src="img/4-1.jpg"
+								onclick="gallarycontentimg(this.src)">
+						</div>
+						<div class="col-sm-12 col-xs-12">
+							<h4>Choose from the sample</h4>
+						</div>
+					</div>
+				</div>
+			</center>
+		</div>
+	</div>
+
+<!--  STYLE IMAGE SECTION-->
+
+	<div class="col-sm-12" style="padding: 0px">
+		<div class="col-sm-12 stylediv" id="stylediv">
+			<center>
+				<h2 class="blue-text">Choose the style</h2>
+				<hr>
+				<div class="col-sm-12" id="nosty_img_info"
+					style="display: none; margin-bottom: 20px">
+					<h5 style="color: red">
+						<strong>Info!</strong> Please upload image
+					</h5>
+				</div>
+				<div class="col-sm-12">
+					<div class="col-sm-4">
+						<h5>Upload your Style image or experiment with one of our own</h5>
+						<span style="font-size: 16px;">(You can always come back
+							and try on your own image)</span>
+					</div>
+					<div class="col-sm-4">
+						<div id="style-image"></div>
+						<button class="upload-btn btn btn-primary" onclick="$('#stylefor').click();" style="background-color:#717171;">Upload your own</button>
+							<button  id="stytnxt" class="btn btn-primary upload-btn" onclick="scrolltodiv('useripdiv')"
+							style="display: none;background-color:#2fd5ae;">
+							<i class="fa fa-arrow-right" style="font-size:23px;color:white"></i>
+							</button>
+					</div>
+					<div class="col-sm-4 col-xs-12">
+						<div class="content col-sm-6 col-xs-3">
+							<img class="img-cnt" src="img/1-2.jpg"
+								onclick="gallarystyleimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img class="img-cnt" src="img/2-2.jpg"
+								onclick="gallarystyleimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img class="img-cnt" src="img/3-2.jpg"
+								onclick="gallarystyleimg(this.src)">
+						</div>
+						<div class="content col-sm-6 col-xs-3">
+							<img class="img-cnt" src="img/4-2.jpg"
+								onclick="gallarystyleimg(this.src)">
+						</div>
+						<div class="col-sm-12 col-xs-12">
+							<h4>Choose from the sample</h4>
+						</div>
+					</div>
+				</div>
+			</center>
+		</div>
+
+	<!--  USER INPUT SECTION-->
+	
+		<div class="col-sm-12 finalpage" id="useripdiv">
+			<div id="uploading" style="text-align: center; display: none;">
+				<br> <img src="img/loadgdot.gif"> <br>
+			</div>
+			<center id="userinput">
+				<h2>That's it.</h2>
+				<h5 class="more-space-text" class="more-space-text">Share your
+					detail, so that, we'll send you the processed image to your email</h5>
+				<form class=" home-form" id="formid" action="javascript:;"
+					onsubmit="befrajax()">
+					<div class="form-group col-sm-6">
+						<input type="text" class="form-control" id="uname"
+							placeholder="Enter your name" required>
+					</div>
+					<div class="form-group col-sm-6">
+						<input type="email" class="form-control"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+							oninvalid="setCustomValidity('Please enter valid email')"
+							placeholder="Enter your Email"
+							onchange="try{setCustomValidity('')}catch(e){}" id="uemail"
+							required>
+					</div>
+					<button type="submit" id="go" class="btn btn-primary">Done</button>
+				</form>
+			</center>
+			<center id="finished" style="display: none;">
+				<div id="finishedmsg">
+					<!-- Result message comes here -->
+				</div>
+				<a href="https://www.whirldatascience.com" type="button"
+					class="btn btn-primary">Visit Our site</a>
+				<button onclick="reload();" type="button" class="btn btn-primary">Create
+					new</button>
+			</center>
+		</div>
+		<!--upload content button -->
+		<label style="display: none" id="contntfor">Upload Content
+			Image <input type="file" id="content-upload" accept=".jpg, .jpeg" />
+		</label>
+		<!--upload style button -->
+		<label style="display: none" id="stylefor">Upload Style Image
+			<input type="file" id="style-upload" accept=".jpg, .jpeg" />
+		</label>
+		<!-- error msg -->
+		<div class="modal fade" id="myerror" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body" style="">
+						<h5>This format is not supported! Please upload the valid
+							(.jpeg or .jpg) Image</h5>
+					</div>
+					<div class="modal-footer" style="text-align: center;">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/croppie-new.js"></script>
+<script src="js/custom.js"></script>
+<div class="col-sm-12">
+	<hr>
+	<center>Powered by Whirldata</center>
+</div>

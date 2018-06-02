@@ -1,0 +1,81 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Natural Language Processing</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1 class='page-title'>Natural Language Processing (NLP)</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>NLP is the application of AI to understand human language as
+				its spoken/written. Historically humans have interacted with
+				computers using "languages" that computers can understand. These
+				languages are highly structured, precise and devoid of ambiguity.
+				While computers using such languages have brought about tremendous
+				social and economical benefits, as we are seeing all around us, use
+				of computers have always been limited when it came to applications
+				that required understanding of written and spoken human language as
+				its normally done between two humans.</p>
+			<br> <br>
+			<p>For instance, while databases have evolved in different
+				branches and their storing and retrieval and speeds, method of
+				organization, processing time and several other aspects have
+				improved manifolds, it still requires the use of syntactical
+				"languages" to manipulate the databases (add, retrieve, update,
+				etc.). Would it not be nice if a human can write/speak a statement
+				that can directly query a database and expect the query to be
+				translated correctly? This is one such situation where NLP comes is.
+			</p>
+			<br> <br>
+			<p>You could ponder over the following:</p>
+			<li>How would it be if a computer can understand your mood from
+				your tone and sentence construction?</li>
+			<li>How would it be if you could automate your entire customer
+				service/support mechanism (which are anyways being done) and do so
+				with emotions (sympathy, empathy and concesrn)?</li>
+			<li>How would it be if you could have documents sent to you
+				automatically processed and just the “intent” conveyed to you?
+				Imagine the reduction in the number of legal and contractual
+				documents that you have to read as part of your work life?</li>
+			<li>How would it be if while you were in the midst of your
+				household chores, talk to an “agent” that can help you plan a
+				holiday like a expert and have your tickets booked?</li>
+			<br> <p>The applications are endless...</p>
+			<br> <br>
+			<p>Whirldata understands that NLP is a fledgling concept but with
+				a very valuable application potential. Whirldata ensures a sustained
+				in-house Research and Development effort for building NLP-based
+				products/solutions in the financial/retail/energy/healthcare/legal
+				domain. Some products that are in the pipeline - Deep/Shallow
+				Question Answering, Search, ChatBots to enable various operational
+				tasks, client assistance based on inferred client needs, Virtual
+				Assistant to sales teams and advisors/consultants.</p>
+			<br> <br>
+			<p>Every member of Whirldata’s NLP development/testing team is
+				very curious, possess an outstanding sense of humour, possess the
+				inherent ability to share knowledge on a sustained basis and of
+				course technically sound. After all they need to indulge in hours
+				and hours of conversations with the inanimate!</p>
+			<br> <br> <p>Knowledge/Expertise areas:</p>
+			<li>Natural Language Toolkit (NLTK): The comprehensive toolset
+				for the entire range of NLP needs.</li>
+			<li>Pattern – Set of web mining tools for NLP</li>
+			<li>TextBlob – NLP API built on Pattern & NLTK .</li>
+			<li>Scikit-learn: Machine learning libraries Python</li>
+			<li>spaCy – NLP with Python & Cython.</li>
+			<li>Stanford Core NLP</li>
+			<li>Gensim – Vector space and topic modeling toolkit</li>
+			<li>LP / IR like OpenNLP, SOLR, CoreNLP</li>
+			<li>Big Data platforms like Hadoop/Mahout, Spark/MLlib</li>
+			<li>Amazon Web Services</li>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>

@@ -1,0 +1,304 @@
+<link rel="stylesheet"
+	href="https://bootswatch.com/3/paper/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="container col-sm-12">
+	<img class="logo" src="img/logo.png">
+	<div class="col-sm-12">
+		<div class="col-sm-4 section-div">
+			<center>
+				<h4>Bot Configuration</h4>
+			</center>
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-lg-12">
+						<input type="text" class="form-control" id="botName"
+							onChange="selectBotName(); " placeholder="Create the bot name">
+						Bot name must be in alphabets. Select your bot name, we'll create
+						the AWS services with this name for identification
+					</div>
+				</div>
+				<center>
+					<button style="display: none" onclick="" class="btn btn-primary">Next</button>
+				</center>
+			</div>
+		</div>
+		<div class="col-sm-4 section-div">
+			<center>
+				<h4>AWS Configuration</h4>
+			</center>
+			<input type="text" class="form-control" onchange="dataBinding()"
+				id="awsAccessKey" placeholder="AWS Access key"> <input
+				type="text" class="form-control" id="awsSecretKey"
+				onchange="dataBinding()" placeholder="AWS Secret key"> You
+			can delete the AWS Keys from IAM after deploying the Whirlbot engine.
+			<a href="">Click here to know how to get AWS Keys from IAM</a>
+			<center>
+				<button style="display: none" onclick="selectAwsKeys()"
+					class="btn btn-primary">Next</button>
+			</center>
+		</div>
+		<div class="col-sm-4 section-div">
+			<center>
+				<h4>Training</h4>
+			</center>
+			The template contains two columns "Question" & "Answer". You can
+			train the bot with the simple Q&A pattern <br> <span
+				id='my_file_output'></span><br> <br>
+			<center>
+				<input type="file" id="my_file_input" style="display: none" />
+				<button onclick="openFile(); " class="btn btn-primary">UPLOAD
+					Training file</button>
+				<br> <br> <a href="qa.xls" class="">Download the
+					template</a> <br> <br> <br>
+			</center>
+		</div>
+		<center>
+			<div style="color: red" id="errorMsg"></div>
+			<button disabled id="beginBtn" onclick="submitBot()"
+				class="btn btn-primary">Start now</button>
+		</center>
+	</div>
+	<div class="col-sm-12">
+		<div id="log-box" class="col-sm-12  log-box">
+			<span class="log">>> Welcome to Whirlbot express. Waiting for
+				your bot name....</span>
+		</div>
+	</div>
+</body>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.js"></script>
+<script>
+	var training;
+	var email = localStorage.getItem("email");
+	var awsAccessKey;
+	var awsSecretKey;
+	var data;
+	var msgId = 0;
+	var installerUrl = "https://qlua4qihja.execute-api.us-west-2.amazonaws.com/whirlbot";
+	if (email == null) {
+		alert("Email not entered");
+	}
+	var fileName;
+	$("#log-box").append(
+			"<span class='log'>>> Hi, we'll send the further steps to "
+					+ localStorage.getItem("email") + "</span>")
+	function selectBotName() {
+		getLogFeed();
+		$("#log-box").append(
+				"<span class='log'>>> You've selected the bot name: "
+						+ $("#botName").val()
+						+ ". Please provide your AWS Keys</span>")
+	}
+	function selectAwsKeys() {
+		$("#log-box")
+				.append(
+						"<span class='log'>>> Thank you for proving your AWS Keys, we won't store your AWS Keys anywhere. You can delete these keys in AWS IAM service after the bot deployment. Please upload the training file</span>")
+	}
+
+	function selectTrainingFile(recordCount) {
+		$("#log-box").append(
+				"<span class='successlog'>>> Thank you! Your file " + fileName
+						+ " contains " + recordCount
+						+ " questions & answers</span>")
+	}
+
+	// Initialize Firebase
+	// TODO: Replace with your project's customized code snippet
+	var config = {
+		apiKey : "AIzaSyCSR9jzPBc25opgS5fHCmxRuCR0S7JxbRM",
+		authDomain : "www-whirldatascience.firebaseapp.com",
+		databaseURL : "https://whirldatascience-corp.firebaseio.com",
+	};
+	firebase.initializeApp(config);
+	var database = firebase.database();
+
+	function logFeed(query, logType) {
+		query.on("value", function(snapshot) {
+			i = 0;
+			snapshot.forEach(function(data) {
+				i++;
+				if (i == snapshot.numChildren())
+					$("#log-box").append(
+							"<span class='"+logType+"log'>>> "
+									+ (data.val().msg) + "</span>");
+				var objDiv = document.getElementById("log-box");
+				objDiv.scrollTop = objDiv.scrollHeight;
+			});
+		})
+	}
+
+	$('#botName').keypress(function(e) {
+		if (!/[a-zA-Z-]/.test(String.fromCharCode(e.which)))
+			return false;
+	})
+
+	function getLogFeed() {
+		botName = $("#botName").val();
+		var successQuery = firebase.database().ref(
+				'/whirlbot/whirlxp-' + botName + '/successLog');
+		var failQuery = firebase.database().ref(
+				'/whirlbot/whirlxp-' + botName + '/failLog');
+		var logQuery = firebase.database().ref(
+				'/whirlbot/whirlxp-' + botName + '/log');
+		logFeed(successQuery, 'success');
+		logFeed(failQuery, 'fail');
+		logFeed(logQuery, '');
+	}
+
+	function logIntit(query, logType) {
+		query.once("value", function(snapshot) {
+			i = 0;
+			snapshot.forEach(function(data) {
+				i++;
+				if (i < snapshot.numChildren())
+					$("#log-box").append(
+							"<span class='"+logType+"log'>>> "
+									+ (data.val().msg) + "</span>");
+
+			});
+			logFeed(query);
+		})
+	}
+
+	// ======  FILE READER
+
+	function openFile() {
+		console.log("OP")
+		$('#my_file_input').click();
+	}
+
+	var oFileIn;
+
+	$(function() {
+		oFileIn = document.getElementById('my_file_input');
+		if (oFileIn.addEventListener) {
+			oFileIn.addEventListener('change', filePicked, false);
+		}
+	});
+
+	function filePicked(oEvent) {
+		fileName = $('input[type=file]').val().replace(/.*(\/|\\)/, '');
+		$("#my_file_output").html("Selected file: " + fileName);
+		// Get The File From The Input
+		var oFile = oEvent.target.files[0];
+		var sFilename = oFile.name;
+		// Create A File Reader HTML5
+		var reader = new FileReader();
+
+		// Ready The Event For When A File Gets Selected
+		reader.onload = function(e) {
+			var data = e.target.result;
+			var cfb = XLS.read(data, {
+				type : 'binary'
+			});
+			console.log(cfb)
+			i = 0;
+			cfb.SheetNames.forEach(function(sheetName) {
+				i++;
+				// Obtain The Current Row As CSV
+				var sCSV = XLS.utils.make_csv(cfb.Sheets[sheetName]);
+				var oJS = XLS.utils.sheet_to_json(cfb.Sheets[sheetName]);
+				console.log(i + "--->" + oJS[0]['question']);
+
+				// 				$("#my_file_output").html(sCSV);
+				console.log(oJS)
+				training = oJS;
+				validateInputs()
+				//$scope.oJS = oJS
+			});
+		};
+
+		// Tell JS To Start Reading The File.. You could delay this if desired
+		reader.readAsBinaryString(oFile);
+	}
+
+	function validateInputs() {
+		error = "";
+		$('#beginBtn').prop('disabled', true);
+
+		if (botName == null || botName == "") {
+			error = error + ("Please validate the bot name. ");
+		}
+		if (email == null || email == "") {
+			error = error + ("Please validate the email. ");
+		}
+		if (awsAccessKey == null || awsAccessKey == "") {
+			error = error + ("AWS Access key error. ");
+		}
+		if (awsSecretKey == null || awsSecretKey == "") {
+			error = error + ("AWS Secret key error. ");
+		}
+		if (typeof (training) != 'object') {
+			error = error + "Please validate the training file. "
+		}
+		$("#errorMsg").html(error);
+		if (error == "") {
+			$('#beginBtn').prop('disabled', false);
+			data = {
+				"email" : email,
+				"botName" : botName,
+				"awsAccessKey" : awsAccessKey,
+				"awsSecretKey" : awsSecretKey,
+				"training" : training
+			}
+			log("Data", "");
+			log(JSON.stringify(data), "");
+		}
+
+	}
+
+	function dataBinding() {
+		awsAccessKey = $("#awsAccessKey").val();
+		awsSecretKey = $("#awsSecretKey").val();
+		botName = $("#botName").val();
+		validateInputs();
+		selectTrainingFile(training.length);
+		console.log("Data: " + training);
+
+	}
+
+	function log(msg, type) {
+		console.log("dddd");
+		msgId++;
+		$("#log-box").append(
+				"<span id='"+msgId+"' class='"+type+"log'>>> " + msg
+						+ "</span>");
+		// 		$("#log-box").animate({
+		// 			scrollTop : $("#" + msgId).offset().top
+		// 		}, 2000)
+		var objDiv = document.getElementById("log-box");
+		objDiv.scrollTop = objDiv.scrollHeight;
+
+	}
+
+	function scrollToBottom(id) {
+		var div = document.getElementById(id);
+		div.scrollTop = div.scrollHeight - div.clientHeight;
+	}
+
+	function submitBot() {
+
+		console.log(JSON.stringify(data))
+		var settings = {
+			"async" : true,
+			"crossDomain" : true,
+			"url" : installerUrl,
+			"method" : "POST",
+			"headers" : {
+				"content-type" : "application/json"
+			},
+			"processData" : false,
+			"data" : JSON.stringify(data),
+			timeout : 300000
+		}
+
+		$.ajax(settings).done(function(response) {
+			console.log(response);
+		});
+	}
+
+	// ======  END FILE READER
+</script>

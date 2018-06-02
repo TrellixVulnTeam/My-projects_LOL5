@@ -1,0 +1,33 @@
+{
+"Tshirt" : [
+{
+"name":"Men's Black T-shirt",
+"productId":"11",
+"sides":["front","back"],
+"main-img":"11.jpg",
+"sides-img":["11.jpg","11-back.jpg"]
+
+},
+{
+"name":"Men's Yellow T-shirt",
+"productId":"22",
+"sides":["front","back"],
+"main-img":"22.jpg",
+"sides-img":["22.jpg","22-back.jpg"]
+},
+{
+"name":"Men's Navy T-shirt",
+"productId":"33",
+"sides":["front","back"],
+"main-img":"33.jpg",
+"sides-img":["33.jpg","33-back.jpg"]
+},
+{
+"name":"Men's Orange T-shirt",
+"productId":"44",
+"sides":["front","back"],
+"main-img":"44.jpg",
+"sides-img":["44.jpg","44-back.jpg"]
+}
+]
+}

@@ -1,0 +1,121 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Conversational User Interface</title>
+<meta charset="UTF-8">
+<meta name="description"
+	content="Whirldata understands the immense value CUIs offer and focuses
+				its offerings on enabling organizations to leverage their
+				knowledge-base to engage in real-time with customers.">
+<meta name="keywords"
+	content="Chatbots, Conversational User Interface, Business, Automation, Customer satisfaction">
+<meta name="author" content="B A Madhusudhan">
+</head>
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1>Conversational User Interface</h1>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<p>Organizations have collected large amount of data in the last
+				few years. And they continue to collect. The quantity of data
+				increases everyday and the quality and the throughput of processing
+				has ept up with the rate of data collection. Machine learning
+				algorithms combined with low cost computing power available today
+				has allowed advanced and complicated analytics to be run not only on
+				the huge data store – but can also include eternal data about the
+				users/customers in multiple contexts and harness the power of the
+				subjective knowledge.</p>
+			<p>However, the power to leverage this knowledge to increase
+				engagement with customers is limited – they have been limited to the
+				extent to what pre-defined interfaces allow. Interfaces such as
+				mobile apps and websites and to a large extent even the salesperson
+				on the store are limited by the functionalities already built-in or
+				knowledge possessed by an individual (in the case of a salesperson).
+				Pre-defined interfaces are ones whose flow of engagement is decided
+				not in real-time</p>
+			<p>
+				Conversational user interfaces have answered a critical question in
+				the affirmative – or at least have ensured that the answer will be a
+				certain yes in the near future. The question is <b>“if a
+					customer is allowed a free-flow, non-syntax based interaction with
+					the knowledge base of an organization, will it lead to improved
+					revenues, loyalty and satisfaction?”</b>
+			</p>
+			<p>CUIs have the capability to link customers with an
+				organizations real-time learnings. Much of the talk today has been
+				about the availability of voice translation devices such as Echo, OK
+				Google, Siri as being the prime driver for increased CUI. However,
+				the real power of CUIs resides in being able to increase
+				free-flowing non-syntactical engagement with customers through
+				channels that they are familiar with. The modes of engagement could
+				be a website, an app or a voice assistant or a chatbot.</p>
+			<p>Whirldata understands the immense value CUIs offer and focuses
+				its offerings on enabling organizations to leverage their
+				knowledge-base to engage in real-time with customers. In the
+				endeavor to build CUIs, Whirldata has broken down its capability
+				offerings into the following pieces that together enable an
+				effective CUI deployment for an organization:
+			<ul>
+				<li>Ability to effectively use off-the shelf NLP engines and
+					also build new ones where required if regional languages/dialetcs
+					require so</li>
+				<li>Integration capability with multiple virtual assistants –
+					Echo, OK Google, Skype Facebook, Slack</li>
+				<li>Customized mobile and web agents as entry points for CUIs</li>
+				<li>Ability to deploy AWS’ serverless computing architecture –
+					along with hosting in-house at client’s site or a could provider of
+					choice</li>
+				<li>Harness the power of Machine Learning algorithms in a
+					commercially meaningful manner to serve the CUIs
+			</ul>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+<script src="assets/main.js"></script>
+<style>
+.videoblack1 {
+	right: 55px;
+	bottom: 30;
+}
+
+.videoblack2 {
+	left: 100px;
+	bottom: 30;
+}
+
+.upperdiv {
+	margin-top: 1%;
+	margin-bottom: 5%;
+}
+
+.li-right {
+	text-align: right;
+	list-style-type: none;
+	white-space: pre;
+}
+
+.listdot {
+	list-style-type: none;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>

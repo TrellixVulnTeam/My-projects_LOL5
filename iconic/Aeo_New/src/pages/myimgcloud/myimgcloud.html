@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      	<ion-img class="right" width="50" height="50" src="./assets/imgs/aa.png"></ion-img>
+</ion-buttons>
+
+
+<br><br>
+<div class="container">
+	<div class="title"> My Image Cloud</div>
+		<div class="one-image" *ngFor="let post of posts">
+			<img [src]="post.value" />
+		</div>
+</div>
+</ion-content>

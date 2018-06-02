@@ -1,0 +1,28 @@
+page-home {
+
+.vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
+
+.right{
+  position:absolute;
+    right: 2%;
+    
+     }
+
+.center{
+	 position:absolute;
+    left:25%;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+ion-img {
+	background: none;
+}
+
+}

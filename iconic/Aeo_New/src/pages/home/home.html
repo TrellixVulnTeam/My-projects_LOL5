@@ -1,0 +1,49 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding> 
+
+	<ion-buttons left>
+		<button ion-button icon-only menuToggle="left">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-img class="right" width="50" height="50" src="./assets/imgs/aa.png"></ion-img>
+
+	</ion-buttons>
+
+	<ion-grid class="center">
+		<div class="row">
+			<div class="col text-center">
+				<button ion-button round (click)="scan()">Scan QR code / Barcode to select the product </button>
+			</div>
+		</div>
+
+
+		<div class="row" style="width: 60%">
+			<div class="col text-center">
+				<hr>
+			</div>
+			<div>OR</div>
+			<div class="col text-center">
+				<hr>
+			</div>
+		</div>
+
+		<div class="row" style="width: 60%">
+			<div class="col text-center" col-10="">
+				<ion-item> 
+					<ion-input type="text" [(ngModel)]="barcode" placeholder="Enter Product Code"> </ion-input>
+				</ion-item> 
+				</div>
+				<div class="col text-center" col-2="">
+				<button ion-button icon-only  (click)="godesign()">
+						<ion-icon name="md-arrow-round-forward"></ion-icon>
+					</button>				
+			</div>
+		</div>
+
+	</ion-grid>
+
+
+</ion-content>

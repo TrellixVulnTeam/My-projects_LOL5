@@ -1,0 +1,27 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+
+<ion-img class="center" width="200" height="200" src="./assets/imgs/aa.png"></ion-img>
+
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="data.username" type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="data.pass" type="password" value=""></ion-input>
+    </ion-item>
+
+  <div padding>
+    <button ion-button color="primary" (click)="submit()" block>Login</button>
+  </div>
+
+    <!-- <button ion-button color="primary" (click)="mylogin()" block>myLogin</button> -->
+
+
+</ion-content>

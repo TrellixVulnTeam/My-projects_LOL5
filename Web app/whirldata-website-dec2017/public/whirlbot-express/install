@@ -1,0 +1,36 @@
+#!/bin/bash
+# A sample Bash script, by Ryan
+echo Installing Whirlbot express
+echo Downloading installation script
+url="https://raw.githubusercontent.com/whirldata/whirlbot-express/master/whirlbot"
+curl -# -o /tmp/whirlbot $url
+chmod +x /tmp/whirlbot
+echo "Moving to /usr/local/bin"
+sudo mv /tmp/whirlbot /usr/local/bin/whirlbot
+#Download ZIP file
+echo Downloading Deployment package
+url="https://raw.githubusercontent.com/whirldata/whirlbot-express/master/AcceleratorV3-20180313.zip"
+curl -O $url
+
+#Download ChatAgent
+echo Downloading Deployment package
+url="https://raw.githubusercontent.com/whirldata/whirlbot-express/master/chat.zip"
+curl -O $url
+
+#Download Lambda.json
+echo Downloading AWS Lambda configuration file
+url="https://raw.githubusercontent.com/whirldata/whirlbot-express/master/lambda.json"
+curl -O $url
+
+#Download Lambda.json
+echo Downloading Bot configuration file
+url="https://raw.githubusercontent.com/whirldata/whirlbot-express/master/config.xlsx
+"
+curl -O $url
+
+echo Running installation script
+echo Downloading Config file
+
+
+echo Installing Requests Python Package
+sudo pip install requests

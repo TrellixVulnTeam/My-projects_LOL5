@@ -1,0 +1,8 @@
+{
+  "name": "SurveyBot",
+  "app_id": "acd695ab",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,38 @@
+{
+   "allBlogsMeta":[
+      {
+      	 "id":1,
+         "title":"Bringing your data to life at Whirldata",
+         "timeStamp":"Date and time",
+         "shortDescription":"Short description",
+         "featuredImageUrl":"assets/images/articles/bringing-your-data-to-life-at-whirldata.svg",
+         "category":"Category name",
+         "author":"Ara Ramalingam",
+         "articleUrl":"bringing-your-data-to-life-at-whirldata",
+         "featuredVideoURL":"Youtube Location (optional)"
+      },
+      {
+      	"id":2,
+        "title":"Cross-sell and Up-sell with effective Market Basket Analysis – Part I",
+        "timeStamp":"Date and time",
+        "shortDescription":"Short description",
+        "featuredImageUrl":"assets/images/articles/cross-sell-up-sell.svg",
+        "category":"Category name",
+        "author":"Kumaresan Sekar",
+        "articleUrl":"cross-sell-and-up-sell-with-effective-market-basket-analysis-part-1",
+        "featuredVideoURL":"Youtube Location (optional)"
+      },
+      {
+      	"id":3,
+        "title":"Whirldata Labs announces the opening of its new development center in Chennai",
+        "timeStamp":"Date and time",
+        "shortDescription":"Short description",
+        "featuredImageUrl":"assets/images/articles/whirldata-new-office.svg",
+        "category":"Category name",
+        "author":"Ara Ramalingam",
+        "articleUrl":"whirldata-labs-announces-the-opening-of-its-new-development-center-in-chennai",
+        "featuredVideoURL":"Youtube Location (optional)"
+      }
+   ],
+   "featuredBlogs":[1,2,3]
+}

@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="assets/bootstrap.css">
+<link rel="stylesheet" href="assets/style.css">
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto mono' -->
+<!-- 	rel='stylesheet' type='text/css'> -->
+<script src="assets/jquery.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+<script src="assets/custom.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class='well home-banner'>
+		<div class="container">
+			<div class="col-sm-8 home-banner-left">
+				<h1 style="color: #6200EA">Science meets Reality</h1>
+				<hr class="small-divider">
+				<p class="home-banner-desc">At Whirldata, Artificial
+					Intelligence and Neural Networks are not science projects. We help
+					our clients harness the power of cognitive technologies to build
+					commercially viable intelligent solutions</p>
+				<button class="btn btn-primary">Explore our capabilities</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 home-section" id="section2">
+		<div class=" col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/whirlbot.svg">
+		</div>
+		<div class=" col-sm-6">
+			<div class="content-container">
+				<h1 class="home-section-title">Conversational User Experience</h1>
+				<p class="home-banner-desc desc">Give a personal touch to your
+					customer experience. Explore the world of Conversational Interfaces
+					to connect with your customers.</p>
+				<button class="btn btn-primary">More details</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 home-section-alt" id="section3">
+		<div class="col-sm-6">
+			<div class="content-container">
+				<h1>Augmented & Virtual Reality</h1>
+				<p class="home-banner-desc">Magic mirrors and virtual fitting
+					rooms, a 360 degree store experience at home, the power of online
+					shopping at a brick and mortar store, a virtual pottery class in
+					your clients basement - you dream it and we make it happen.</p>
+				<button class="btn btn-primary">More details</button>
+			</div>
+		</div>
+		<div class=" col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/head-blue.svg">
+		</div>
+	</div>
+	<div class="col-sm-12 home-section" id="section4">
+		<div class="col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/data-driven.svg">
+		</div>
+		<div class=" col-sm-6">
+			<div class="content-container">
+				<h1 class="home-section-title">Data Analytics</h1>
+				<p class="home-banner-desc desc">Business data is a goldmine of
+					information. We help our clients mine for actionable insights that
+					inspire meaningful business decisions which lead to profit and
+					revenue growth.</p>
+				<button class="btn btn-primary">More details</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 home-section-alt" id="section5">
+		<div class=" col-sm-6">
+			<div class="content-container">
+				<h1>Image and Video Processing</h1>
+				<p class="home-banner-desc">Count cars in your parking lot,
+					separate plastic from paper at your recycling plant, detect pot
+					holes as they happen - not just pipe dreams. The future is now.</p>
+				<button class="btn btn-primary">More details</button>
+			</div>
+		</div>
+		<div class="col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/red-bulb.svg">
+		</div>
+	</div>
+	<div class="col-sm-12 home-section" id="section6">
+		<div class="col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/alexa.svg">
+		</div>
+		<div class=" col-sm-6">
+			<div class="content-container">
+				<h1 class="home-section-title">Natural Language</h1>
+				<p class="home-banner-desc desc">Answer a question, understand
+					your customer sentiments, mine for insights in a doctors note or
+					look through a 1000+ page equipment manual.</p>
+				<button class="btn btn-primary">More details</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 home-section-alt" id="section7">
+		<div class="col-sm-6">
+			<div class="content-container">
+				<div id="services-mini"></div>
+			</div>
+		</div>
+		<div class="col-sm-6 img-container">
+			<img class="home-section-img" src="assets/images/wordcloud.svg">
+		</div>
+	</div>
+</div>
+<script src="assets/bootstrap.js"></script>
+<script>
+	var i = 1;
+	$(window).keypress(function(e) {
+
+		if (e.keyCode === 0 || e.keyCode === 32 || e.keyCode === 40) {
+			i++;
+		} else {
+			i--;
+		}
+		e.preventDefault()
+		console.log('Space pressed');
+		$('html,body').animate({
+			scrollTop : $("#section" + i).offset().top
+		}, 'slow');
+	})
+</script>

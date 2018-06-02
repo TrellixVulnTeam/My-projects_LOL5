@@ -1,0 +1,289 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | ice911-case-study</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1 class='page-title'>20 minutes to converge your product description page into Web-based virtual reality with voice enabled from scratch-Using a-frame.js</h1>
+			<p>Author: Sivaranjani J</p>
+			<hr>
+		</center>
+		<div class="container inner-content-container">
+			<h3>VR</h3>
+
+<p>VIRTUAL REALITY or REALITY EMULATION describes the computer-generated environment in three-dimensional view that are interactive with the users </p>
+			<br> <br>
+			<h3>WHY VR IN ECOMMERCE</h3>
+			<p>  &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  So far, VR has been bumped only into the world of games but as the retailers look forward in giving their customers a hypnotic experience, VR takes the next step in transforming the digital world. 
+VR will transform the circumstances of how we shop online .it enables the shoppers to open the website and explore themselves into it. Imagine having no text, no click in the webpage,  you can select the department or product by just gazing at the list or by asking what you want through your speech !!!,,
+</p>
+			<br> <br>
+			<h3>SO YES, HERE’S WHAT WE ARE BUILDING</h3> 
+			<p>  Ultimately, shoppers pop onto the website for viewing the products. Bringing in the concept of virtuality at the product description page (PDP) is the key for possession.
+Taking this as an instance, I will show you on how this can be implemented using a-frame.js
+.</p><br><center>
+<div class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/74wJKhfeo1A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+			</center><br><br><br><br><p>
+			<b>I’ll outline the steps I took to get here,</b>
+			</p>
+			<p>
+			<li>Initially, let’s take up the products and make it rotate in all direction so that the customers can have a view of the product in all dimensions. this can be achieved in various formats like gif, videos or a series of images
+			<li>Now, let’s take on all the attributes of the product like size chart, offers, promotions, etc as small images called HOVER IMAGES fixed up. Each hover image is linked with a larger image consisting of the complete information about the entity. This larger image is called as the INFORMATION IMAGES and it pops on when the customer holds the view over the Hover image <br><br>
+			<p><center>
+			<img src="assets/images/vrp_1.png" height="auto" width="70%">
+   				</center></p> <br>
+			<li>Speech recognition can also be used instead of the virtual cursor. Here the speech is converted into text and then mapped to the respective functions
+			 
+			 <h3>What’s A-FRAME .JS?</h3>
+
+			<p>A-FRAME.JS a web framework for building VR experiences. This is an easy and powerful way to develop VR. A-frame can be developed from the plain HTML by just   adding “a-frame” in the head tag and creating that as an “.html” file and open it through the browser without installing any additional apps. A-frame has many core components like geometries materials, lights, animations, models, ray casters, positional, audios, videos, test, control, etc. Its main aim is to define a fully dynamic interactive VR experiences making full use of the positioning and controllers.</p>
+			<br> 
+			<h3>What do you require?</h3>
+
+			<p>Images for your product in all directions, the hover, the logo, 360-degree background and the information pops. </p>
+			
+
+			<h3>STEPS:</h3>
+
+			<h3>TAGS</h3>
+		<p>
+			<h4>Head </h4>
+</p>
+			<p>The line is the head tag, it’s the  container to hold all the title elements, scripts, styles. Etc ...According to our need we can add on the components of the a-frame in the head tag. </p>
+			<pre class="ht">&lt;head&gt;<br />
+    &lt;title&gt;American Eagle&lt;/title&gt;<br />
+    &lt;script src="js/aframe.min.js"&gt;&lt;/script&gt;<br />
+    &lt;script src="js/aframe-gif-shader.min.js"&gt;&lt;/script&gt;<br />
+    &lt;script src="js/aframe-gif-component.min.js"&gt;&lt;/script&gt;<br />
+    &lt;link rel="icon" href="img/ae.png" type="image" sizes="16x16"&gt;<br />
+&lt;/head&gt;
+			</pre>
+				
+				
+				<h4>Body</h4>
+				<p>
+				<h5>Scene</h5>
+</p>
+			<p> a-scene is the component which is inherited from the entity class thus enabling us to attach all its child components like a-assets and a-entity. a-scene greatly helps us in handling the webVR and Three-js</p> 
+
+			<h5>Assets</h5>
+
+			<p> A-frame enables us to add assets (i.e., images, videos, sound files ,3D models and materials) .and   manage them in one place, where we preload it and add cache of the assets for having a better efficiency. These assets can be assigned a name as ID. The assets that are to be loaded for the entire sessions like the initialization images, product images and the hover images are added on in the asset.</p> 
+            <pre class="ht">  &lt;a-assets&gt;<br />
+        	&lt;!-- IMAGE INITIALIZATION --&gt;<br />
+            &lt;img id="logo" src="img/logo.png"&gt;<br />
+            &lt;img id="bg" src="img/image.jpg"&gt; <br />
+            &lt;img id="aelogo" src="img/ae.png"&gt;<br />
+            &lt;img id="productimg" src="img/product.jpg"&gt;            <br />
+            &lt;img id="allviews" src="img/allpants.jpeg"&gt;<br />
+            &lt;img id="animated" src="img/ae_animated.gif"&gt;<br />
+            &lt;!-- THE HOVER IMAGES --&gt;<br />
+            &lt;img id="productHeaderImage" src="img/productHeaderImage.png"&gt; <br />
+            &lt;img id="availableSizes" src="img/available_sizes_home.png"&gt;<br />
+            &lt;img id="theDetails" src="img/the_details_home.png"&gt;<br />
+            &lt;img id="sizeChart" src="img/size_chart_home.png"&gt;<br />
+            &lt;/a-assets&gt;
+				</pre> 
+             <h5>Background</h5>
+
+			<p> The background of our product display page must enable us to give in the virtual effects. For attaining this we can use the <sky> tag. We can feed in the source for any 360 images or have a plain background by just using the sky tag and add a colour required. 
+For a simple 360-degree white background,
+</p> 
+             <pre class="ht">&lt;a-sky src=""&gt;<br />
+&lt;/a-sky&gt;
+				</pre> 
+				<h5>Entity</h5>
+
+			<p> a-entity component provides extra events and it handles the hand animations and poses. It defaults the geometry primitive property to the box and maps the HTML width attribute and colour attribute along with few more components like material, position, scale, visible, etc.
+</p> <br>
+<li>Material -- appearance of the entity such as colour, texture or capacity, etc.
+			<li>Position -- responsible in placing the entities in the 3D environment with respect to the coordinate (X, Y & Z).
+			<li>Scale -- responsible in the entity’s shrinking or stretching with respect to the coordinate (X, Y, Z)
+			<li>Visible-- a Boolean type and the default values true. where,<br>
+               True: The entity will be visible;<br>False: The entity will not be visible but will still exist in the scene<br> <br>
+               <pre class="ht">&lt;a-entity geometry="primitive:plane;segment:4;width:1.5;height:2;" scale="7 7 7" position="-8	 0 -10" material="shader:gif;src:url(img/ae_animated.gif);" gif="" visible="false"&gt;&lt;/a-entity&gt;
+				</pre> <br>
+<h5>Images</h5>
+
+			<p> a-image tag helps the images to be positioned flat on to the background. To custom the images we can add the attributes like colour, material, position, scaling, etc. The hover images, the product’s images and the information images are displayed using this tag
+</p> 
+             <pre class="ht">&lt;a-image id="productimage" src="#productimg" width="1.5" height="2" position="-8 0 -10" scale="7 7 7"&gt;&lt;/a-image&gt;<br />
+&lt;a-image id="productHeaderImage" src="#productHeaderImage" width="16" height="6" position="5 4 -8" scale="0.5 0.5 0.5"&gt;&lt;/a-image&gt;        <br />
+&lt;!-- HOVER IMAGES --&gt;<br />
+&lt;a-image id="availableSizesHome" src="#availableSizes" width="4" height="4" position="-1 1.5 -8" scale="0.5 0.5 0.5"&gt;&lt;/a-image&gt;<br />
+&lt;a-image id="sizeChartHome" src="#sizeChart" width="4" height="4" position="-1 4.5 -8" scale="0.5 0.5 0.5"&gt;&lt;/a-image&gt;<br />
+&lt;!-- INFORMATION IMAGES --&gt;<br />
+&lt;a-image class="infoImages" id="size" src="img/Available_Sizes.png" width="12" height="15" position="4.6 1 -7" scale="0.5 0.5 0.5" visible="false"&gt;&lt;/a-image&gt;<br />
+&lt;a-image class="infoImages" id="chart" visible="false" src="img/size_chart.png" width="12" height="15" position="4.6 1 -7" scale="0.5 0.5 0.5"&gt;&lt;/a-image&gt;
+				</pre> <br>
+				<h5>The virtual cursor</h5>
+
+			<p>  The a- camera is used to determines what the user sees .the viewport can  be changed by modifying the camera entity’s position or rotation.
+</p> 
+           <pre class="ht"> &lt;a-camera position="0.5 0 0"&gt;<br />
+ &lt;a-cursor color="#ccc"&gt;<br />
+ &lt;/a-camera&gt;
+				</pre> <br>
+
+      <h3> SCRIPTS</h3><p>
+      <h4>Query selector</h4></p>
+
+			<p> Query Selector() is used to match any specified ID or CLASS from the tags .
+			<p> Syntax:	</p>
+			<p><pre class="ht">Element = document. querySelect (Selector);</pre></b></p>
+			<p>Where the,
+Element is the element object and the selector is any ID or CLASS. The ID can be accessed by adding a prefix of "#" while the CLASS is accessed by using a prefix of " . ". </p> 
+           <pre class="ht">var allInfoImages = document.querySelectorAll('.infoImages');<br />
+var allSize = document.querySelector('#availableSizesHome');<br />
+var sizeChart = document.querySelector('#sizeChartHome');
+				</pre> <br>
+				 <h4>Event handler </h4>
+
+	<p> Event handlers can be attached to the specified elements, so that the element performs its action only when its pertained event happens. there are lots of event handlers available, here we are using only the Mouse Enter and Mouse Leave.
+</p> <br>
+<li>Mouse enter event  - when the pointer ( here its virtual cursor) is moved over the element (hover image) where the listener is attached is mapped to a function where the popping image (information image) is attached 
+			<li>Mouse leave event  - when the pointer ( here its virtual cursor) is moved away the element (hover image) where the listener is attached no event happens	
+            <br><br><pre class="ht"> // SHOW OR HIDE ALL AVAILABLE SIZES<br />
+ allSize.addEventListener("mouseenter", function() {<br />
+        	showHideImages("size",true);<br />
+  });<br />
+ allSize.addEventListener("mouseleave", function() {<br />
+        	showHideImages("size",false);<br />
+  });
+				</pre> <br>
+				<h5>Show/hide</h5>
+				<p>When the event is hold , the information image must pop in ,this is handled with care in this function. Only one information image must be popped at any instance . For this, each time an event is hold at the hover image, all the information image’s visibility is set FALSE while only the respective hover image’s information image is set TRUE.</p>
+				<br><pre class="ht">function showHideImages(imageId,visibility){<br />
+        	//console.log("Working on "+imageId);<br />
+        	//console.log(allInfoImages.length-1);<br />
+        	if(visibility==true){<br />
+        		for(i=0;i&lt;=allInfoImages.length-1;i++){	// HIDE ALL THE IMAGES AND SHOW ONLY THE CURRENT<br />
+        			allInfoImages[i].setAttribute("visible",false);<br />
+        		}<br />
+        	 <br />
+        	}<br />
+        	 var imageObject = document.querySelector("#"+imageId);<br />
+        	 imageObject.setAttribute("visible", visibility);<br />
+        }
+				</pre> <br> 
+				 <h4> Product </h4>
+
+	<p> Virtual reality over the product is the key requirement . Customers can just turn the image’s focus in any direction with the virtual cursor so as to enable a better shopping experience by knowing more on the product's  look .
+ For this instance, let’s use the animation component. If the virtual cursor is over the dimension of the product then the picture must rotate and when the mouse is away from the product the animation must be paused.
+ <br><pre class="ht"> var sceneEl = document.querySelector('#productimage');<br />
+        sceneEl.addEventListener('mouseenter', function(e) {<br />
+        	 startAnimation();<br />
+        });<br />
+        sceneEl.addEventListener('mouseleave', function(e) {<br />
+        	stopAnimation();<br />
+        });
+				</pre> <br> 
+<h5> Animation start</h5>
+<p>Lets take up a series of images of the product in all different directions, say about 15 images . Now when the cursor is on the dimension of the product image , the series of the images are displayed - which makes the product to appear in a rotating manner . When the cursor is moved away , the rotation is paused and it resumes when the cursor is bought back .The series  of images are displayed in an order from 1 to 15 , when it reaches the 15th image it starts again from 1st . Its like a cyclic process .Each image in the series  are  displayed with the time interval in 100 MS . 
+</p> 
+<br><pre class="ht">function startAnimation() {<br />
+           // console.log("Started");<br />
+            animationInterval = setInterval(function() {<br />
+                document.querySelector('#productimage').setAttribute("src", "sprite/row-1-col-" + i + ".jpg");<br />
+                if (i &gt; 15) {<br />
+                    i = 0;<br />
+                }<br />
+<br />
+                i++;<br />
+            }, 100);<br />
+        }
+				</pre> <br>
+<h5> Animation stop </h5>
+<p>When the virtual cursor is out of the product image, the image series must be paused i.e., The image must remain in static view at that instance.
+</p> 
+<br><pre class="ht">function stopAnimation() {<br />
+            //sceneEl.querySelector('#productimage').setAttribute("src","sprite/row-1-col-"+i+".jpg");<br />
+            clearInterval(animationInterval);<br />
+        }
+				</pre> <br>
+   
+ <h4>Speech recognition </h4>
+
+	<p> Now adding essence to our virtuality, what if we just talk to the device and get our answer (like ask for the attribute of the hover image and its respective information image pops on) 
+</p><p> 
+<h5><b>Voice to text</b></h5></p>
+<p> Now when we talk to the device, the device must read the speech, process and then covert it to a text. we will require these function
+</p> 
+<li> SpeechSynthesisUtterance ()- used for the speech requests. Information like which to read and how to read (like language) are given here
+			<li>Get Voices ()-  represents all the voices available in the device
+			<li>Speech Recognition ()- this allows the JavaScript to access the audio stream and to convert them into text of events
+			 
+<br><br><pre class="ht">var msg = new SpeechSynthesisUtterance();<br />
+var voices = window.speechSynthesis.getVoices();<br />
+var recognition = new webkitSpeechRecognition();
+				</pre> <br>
+				<h5><b>Events</b></h5>
+<p>The converted text is taken in as individual events. These events are mapped such that the respective information images pop on when called.
+</p> 
+		<br><pre class="ht">recognition.onresult = function(event) {<br />
+var text = "";<br />
+  for (var i = event.resultIndex; i &lt; event.results.length; ++i) { // GET THE TEXT FROM THE VOICE<br />
+                text += event.results[i][0].transcript;<br />
+            }<br />
+ // TO SOLVE THE TEXT RECOGNITION<br />
+            if(text.includes("size chart")){<br />
+            	text="chart";<br />
+            }else if(text.includes("available sizes")){<br />
+            	text="size";
+				</pre> <br> 
+
+				<p>Each time an event is hold and the process is done, the recognition must again re-start immediately. So that no input from the customer is missed. Sometimes the wrong input can also be given by the user, so we must prompt the user to move forward in the right direction by handling all the errors. 
+</p> 
+<br><pre class="ht">recognition.onend = function(event) {<br />
+            recognition.start();<br />
+        }<br />
+        <br />
+        recognition.onerror = function(event) {<br />
+        	//console.log("ISSUE "+event.error);<br />
+        }<br />
+        recognition.start();
+				</pre> <br> 
+
+
+				<p>Whooooww!!!...so yes, we have completely converted a normal product descriptive page into a web-based virtual reality with voice enabled .
+The entire code is available in our GitHub account. <p>You can also download it from: <a href="https://github.com/whirldata/ar-shopping-experience">
+https://github.com/whirldata/ar-shopping-experience  </a></p>
+
+</p> <br>
+			<br> <br>
+			<p>
+			<br>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>
+	<style>
+	.ht{
+		    line-height: 0.846;
+		}
+
+		
+		.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+		</style>

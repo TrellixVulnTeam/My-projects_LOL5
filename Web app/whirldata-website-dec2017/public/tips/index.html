@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>TensorflowTips</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #33BBFF;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+    background-color: #33BBFF;
+    color: white;
+}
+</style>
+<body>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:310px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h2 style = "color:yellow"><b>whirldata<br>labs</b></h2>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close('btn1')" class="w3-bar-item w3-button w3-hover-white" id ='btn1'>Home</a> 
+    <a href="#tfsession" onclick="w3_close('btn2')" class="w3-bar-item w3-button w3-hover-white" id ='btn2'>session</a> 
+    <a href="#tfplaceholder" onclick="w3_close('btn3')" class="w3-bar-item w3-button w3-hover-white" id ='btn3'>placeholder</a> 
+    <a href="#tf.placeholder_with_default" onclick="w3_close('btn4')" class="w3-bar-item w3-button w3-hover-white" id ='btn4'>placeholder_with_default</a> 
+    <a href="#tf.sparse_placeholder" onclick="w3_close('btn5')" class="w3-bar-item w3-button w3-hover-white" id ='btn5'>sparse_placeholder</a> 
+  </div>
+</nav>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+	<div class="w3-container" style="margin-top:80px" id="Home">
+		<h1  class="w3-jumbo"><b>Tip of the day</b></h1>
+	</div>
+  <div class="w3-container" style="margin-top:80px" id="tfsession">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>tf.session()</b></h1>
+    <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+    <p><h3>Intro about “tf.Session()” in Tensorflow:</h3>
+The session is used to allocate memory and other resources like cpu’s and gpu’s.
+Without creating session in tensorflow we can’t do any computations in the program.<br>
+<u>Example program to add to constants in Tensorflow</u>
+<pre>import tensorflow as tf
+a = tf.constant(5.0)      # a is constant
+b = tf.constant(10.0)     # b is constant
+add = a+b                 # add is a Operation
+print(add)  
+#Where Const and Const_1 are ‘a’ and ‘b’</pre>
+<h5>#Output</h5>
+<pre>&lt Tensor("add:0", shape=(), dtype=int32) &gt<br></pre>
+#This just says that “add” is tensor.”(i.e) “add variable is a matrix ,with the dtype int32 and its shape=(1, )<br>
+#To compute the value of add ,we need to create a session to allocate the values for the constants
+Now all the values and operations are added to the default graph, the graph just has the flow of computations and the graph for the above program is shown below
+<center>
+<img src="img/session1.png"></center>
+<pre><p>#creating session
+<p>sess = tf.Session()#(Now we just allocate memory space for the constants)</p>#Executing the operations
+<p>print(sess.run(add))<br>#(now the values for “a” and “b” gets initialized and the value of “add” is calculated)</p></pre>
+<h3>Output</h3>
+15.0<pre>#close the session
+sess.close()
+#(this will close the session and the memory will deallocated)</pre></p>
+  </div>
+  <div class="w3-container" id="tfplaceholder" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>tf.placeholder()</b></h1>
+    <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+    <p><h3>Intro about “tf.placeholder()” in Tensorflow</h3><br>
+Placeholder are used to take values during execution using feed_dict 3 types of placeholders
+<ul>
+<li>1.tf.placeholder()</li>
+<li>2.tf.placeholder_with_default()</li>
+<li>3.tf.sparse_placeholder()</li>
+</ul>
+<h5><u>tf.placeholder()</u><h5>
+This placeholder can take a tensor as a input during the execution<br>
+<u>Exapmle</u><br>
+<pre>
+import tensorflow as tf
+import numpy as np
+x = tf.placeholder(tf.float32, shape=(10,10))
+# we just created a placeholder
+y = tf.matmul(x, x)
+# simple martrix multiplication
+sess = tf.Session()
+#created a session
+rand_array = np.ones((10,10))
+#we mutiplied x with x and  stored the results in rand_array
+print(sess.run(y, feed_dict={x: rand_array}))
+#Now we are feeding the value for 'x' using feed_dict
+sess.close()
+</pre>
+<h3>Output</h3>
+<pre>
+  <img src = "img/place1.png">
+</pre> 
+</p>
+  </div>
+<div class="w3-container" id="tf.placeholder_with_default" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>tf.placeholder_with_default()</b></h1>
+    <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+    <p><h3>Intro about “tf.placeholder_with_default()” in Tensorflow</h3><br>
+This placeholder must be feed with a default while declaring itself<br>
+<u>Exapmle</u><pre>
+import tensorflow as tf
+import numpy as np
+y = np.ones((10, 10))
+x = tf.placeholder_with_default(y,(10,10),name  = 'x')
+#we are feeding a tensor to the placeholder x 
+sess = tf.Session()
+print(sess.run(x))
+#here we are not passing any inputs to the placeholder during the execution,we just called 'x'<br>while running the session . so it will compute the value of y and copies it to x
+sess.close()
+</pre>
+<p>
+  <h3>Output</h3>
+  <pre>
+    <img src ="img/place2.png">
+  </pre>
+    
+  </div>
+  <div class="w3-container" id="tf.sparse_placeholder" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>tf.sparse_placeholder()</b></h1>
+    <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+    <p><h3>Intro about “tf.sparse_placeholder()” in Tensorflow</h3><br>
+This placeholder takes 3 argument(indices ,values and shape of the output tensor) and returns a single tensor as output<br>
+<b>indices</b>:It says that in which row and column , we need to place the value<br>
+<b>values</b>:It says ,what are the values to be inserted<br>
+<b>dense_shape</b>:It says the shape of the tensor<br>
+<u>Exapmle</u><br>
+<pre>
+import tensorflow as tf
+import numpy as np
+x = tf.sparse_placeholder(tf.float32)
+y = tf.sparse_reduce_sum(x)
+sess = tf.Session()
+
+indices = np.array([[3, 2], [4, 5]], dtype=np.int64)
+#it says that in 3rd row and 2nd column a value has to be placed and in 4th row and 5th column another value has to placed
+value = np.array([1.0, 2.0], dtype=np.float32)
+#1.0 is the first value to placed in 3rd row and 2nd column and 2.0 is the second value to be placed in 4th row and 5th column
+shape = np.array([5,5], dtype=np.int64)
+#[5,5] is the shape of the tensor
+print(sess.run(y, feed_dict={x: tf.SparseTensorValue(indices, value, shape)}))
+print(sess.run(x, feed_dict={x: (indices, value, shape)})) 
+sess.close()
+</pre>
+<p>
+  <h3>Output</h3>
+  <pre>
+    <img src ="img/place3.png">
+  </pre>
+</p>
+    
+</div>
+
+  
+
+  
+  
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+
+}
+ 
+function w3_close(btn) {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+    console.log(btn);
+    $(".w3-bar-block a").css("background-color","#2196F3");
+    $(".w3-bar-block a").css("color","white");
+    $("#"+btn).css("background-color","white");
+    $("#"+btn).css("color","black");
+
+    //document.getElementById("btn2").style.background-color = 'w3-blue'
+
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

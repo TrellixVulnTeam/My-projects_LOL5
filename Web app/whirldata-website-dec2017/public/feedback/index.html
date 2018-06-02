@@ -1,0 +1,43 @@
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="asset/js/feedback.js"></script>
+<script src="asset/js/feedbackClient.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="asset/css/bootstrap.css" media="screen">
+<link rel="stylesheet" href="asset/css/custom.css" media="screen">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+</head>
+<div class="container">
+	<div class="col-sm-12">
+		<h1 class="col-sm-8" id="storeName" style="display:"></h1>
+		<img src="" id="logo" class="col-sm-4 pull-right"
+			style="max-width: 300px";>
+	</div>
+	<div class="col-sm-12">
+		<h3 id="userName" style="dipslay: none"></h3>
+		<hr>
+		<div id="responses" style="display: none">
+			<h2 id="question"></h2>
+			<div id="options"></div>
+			<h4 class="answers" id="option1">Option 1</h4>
+			<h4 class="answers" id="option2">Option 2</h4>
+			<h4 class="answers" id="option3">Option 3</h4>
+			<h4 class="answers" id="option4">Option 4</h4>
+		</div>
+		<center>
+			<div class="qrcode" style="display: none">
+				Scan this QR code to give your responses
+				<div id="qrcode"></div>
+			</div>
+		</center>
+	</div>
+</div>
+<img class="qrcode" src="" style="margin-top:10px;width: 100%" id="promoImage">
+<script>
+	
+</script>

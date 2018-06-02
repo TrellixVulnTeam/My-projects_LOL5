@@ -1,0 +1,23 @@
+<ion-menu [content]="content" persistent="true">
+  <ion-header>
+  </ion-header>
+  <ion-content>
+	
+<ion-col style="padding:35%" class="col" col-6="">
+      	<img  width="100" height="100" src="./assets/imgs/aa.png">
+</ion-col>
+    <ion-list>
+
+
+<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}}</button>
+
+    </ion-list>
+      <button menuClose ion-button round (click)="logout()">Logout</button>
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+

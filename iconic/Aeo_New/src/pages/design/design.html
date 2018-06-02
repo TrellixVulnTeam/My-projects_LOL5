@@ -1,0 +1,57 @@
+<ion-header></ion-header>
+
+<ion-content class="no-scroll">
+	<ion-buttons left>
+		<button ion-button icon-only menuToggle="left">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-img class="right" width="50" height="50" src="./assets/imgs/aa.png"></ion-img>
+	</ion-buttons>
+
+	<div id="designarea" class="myClassName">
+		<div (click)="showdeletebox()" >
+			<canvas id="c" class="inner" ></canvas> 
+    		<canvas id="backc" class="inner" ></canvas> 
+
+		</div>
+	</div>
+	<div id ="info" ></div>
+	<div id="overlay" class="overlay" (click)="overlayoff()">					
+		<div class="gallary">
+			<div class="dtitle">My Cloud</div>
+			<div class="one-image1" *ngFor="let post of posts">
+				<img crossorigin="anonymous" 		(click)="insertimg(post.key)" [src]="post.value" [id]="post.key" />
+			</div>
+		</div>
+	</div>
+
+	<!-- sides div -->
+
+	<div class="up-nav" id="sidebox" style="display:none;left: 0;position: absolute; bottom: 50px; z-index: 2;width:100%">
+		<div style="text-align: center ;background-color: rgba(0, 0, 0, 0.3)">
+			<button ion-button round (click)="sides('Front')">Front</button>
+			<button ion-button round (click)="sides('Back')">Back</button>
+			<ion-icon (click)="hidesides()" name="close" class="close"></ion-icon>
+		</div>
+	</div>
+
+	<!-- delete active object -->
+	<div class="up-nav" id="deletebox" style="display:none;left: 0;position: absolute; bottom: 50px; z-index: 2;width:100%">
+		<div style="text-align: center ;background-color: rgba(0, 0, 0, 0.1)">
+			<button ion-button round class="txtcancel" (click)="dltactiveobject()">Delete</button>
+			<button ion-button round class="close1" (click)="hidetext()">Ok</button>
+		</div>
+	</div>
+
+	<!-- align to the bottom of the page -->
+	<div style="left: 0;position: absolute; bottom: 0px; z-index: 2;width:100%">
+		<div style="text-align: center ;background-color: rgba(0, 0, 0, 0.8)">
+			<button ion-button round (click)="overlayon()" class="fancy-btn open">Add Image</button>
+			<button ion-button round (click)="insertext()">Add Text</button>
+			<button ion-button round id ="sides" style="margin-top: -45px" (click)="showsides()">sides</button>
+			<button ion-button round (click)="saveimg()">Save</button>
+			<button ion-button round (click)="ionViewDidLoad()"> Print now</button>
+
+		</div>
+	</div>
+</ion-content>

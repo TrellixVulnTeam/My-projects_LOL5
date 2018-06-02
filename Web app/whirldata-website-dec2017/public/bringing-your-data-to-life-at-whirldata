@@ -1,0 +1,100 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Whirldata | Bringing your data to life at Whirldata</title>
+</head>
+
+<div id="section1"></div>
+<div id="headerContent"></div>
+<div class="body-container">
+	<div class="inner-content" id="section2">
+		<center>
+			<h1 class='page-title'>Bringing your data to life at Whirldata<hr></h1>
+		</center>
+		<div class="container inner-content-container">
+			<p>Most of us have servers and storage units chock-full of
+				data(big data) just lying around or the potential to gather large
+				amounts of data. Exploring the possibility of making sense of the
+				data and harnessing it to drive value for your business has become
+				easier than ever.</p>
+			<br> <br>
+			<p>Business Intelligence and Business Analytics is combination of
+				software, hardware and cloud architectures, custom and off the shelf
+				applications and databases (RDBMS, NoSQL, Big Data, Timeseries
+				database etc) to enables real time or near real time, interactive
+				access to processed data, supporting decision making, gathering
+				business insights and improving overall productivity.</p>
+			<br> <br>
+			<p>A strong program to source, de-silo, organize and transform
+				unstructured and semi-structured data forms the basis of a
+				successful business analytics undertaking.</p>
+			<br> <br>
+			<p>With some creative input, simple data organization and data
+				visualization tools like Power BI, Qlik (Qlikview and Qlisense), IBM
+				Watson Analytics, custom development packages on R, D3.js, Grafana,
+				Apache Spark etc, data comes to life to tell a vivid and compelling
+				story, visualize your business health, engage your customers,
+				improve your process and improve your profit margins.</p>
+			<br> <br>
+			<p>At Whirldata (www.WhirlDataScience.com) we enable our
+				customers by providing actionable insights through dashboards
+				accessible from the device of your choice or thourgh providing
+				critical alerts and reminders. Our customers experience data in ways
+				that they never imagined were possible. Our service stack include
+				setting up of the data collection mechanisms, data organization,
+				building the right analytic models and providing highly interactive
+				visual presentations. Our technical and staff and scientist are
+				deeply skilled in various commercial and open source tools and
+				languages, analytic packages and artificial intelligence (machine
+				and deep learning) and provide best of breed business analytic
+				solutions.</p>
+			<br> <br>
+			<p>Some key factors that distinguish our services from the rest</p>
+			<br> <br>
+			<li>Simple three step data integration
+			<li>Swift transformation of data as required
+			<li>Skilled resources handling your data in secure and effective
+				manner
+			<li>Comprehensive and context sensitive analysis
+			<li>Powerful interactive visual tools
+				<p>Our R&D team keeps us constantly updated and trained on the
+					new advancements in technology.</p> <br> <br>
+				<p>
+					<b>ABOUT WHIRLDATA</b>
+				</p> <br>
+				<p>
+					Whirldata (www.whirldatascience.com), helps you prospect new
+					customers and retain existing clients with intelligent data
+					handling capabilities. We provide world class data analytics and
+					insights on real time data to help our clients understand their
+					customer needs, run their machineries better, fine tune their
+					devices, optimize healthcare and medication or grow better yields
+					on their farms. Whirldata makes scalable big data and artificial
+					intelligence based solutions available to small and medium size
+					businesses at a very affordable cost. Our range of data services
+					include: <br> <br>
+			<li>Effective client data analysis, predictions and forecasting
+			
+			<li>Implementation of IoT & Industrial IoT based solutions for
+				consumer devices, machineries & manufacturing plants,
+			<li>Agricultural farm, healthcare and automation
+			<li>Machine learning & deep learning solutions
+			<li>Data integration, Enterprise service bus implementations,
+				data cleansing, modeling & warehousing
+			<li>Be-spoke intelligent solutions using various off the shelf
+				tools
+			<li>Effective data streaming, collection and structuring
+			<li>Cloud-based solution offering
+			<li>Retail product recommendation engines
+			<li>Big data and NoSQL implementations
+			<li>Artificial Intelligence
+				<p>
+					Email us, at info@whirldatascience.com, to give life to your data
+					and how your business can derive advantages from data analytics and
+					reporting, natural language processing, speech & image recognition,
+					neural networks and big data. <br> <br>
+		</div>
+	</div>
+</div>
+<div id="footerContent" class='footer'></div>
+<script src='js/jquery.min.js'></script>
+	<script src="assets/main.js"></script>
